@@ -1,1 +1,3 @@
 # Aliases
+
+alias lsl="ls -a"
