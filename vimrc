@@ -14,7 +14,9 @@ set number
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
+""""""""""""""
 " VUNDLE START
+""""""""""""""
 
 " turn off filetype for vundle
 filetype off
@@ -57,7 +59,9 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put non-Plugin stuff after this line
 
+""""""""""""
 " VUNDLE END
+""""""""""""
 
 " Setup Powerline
 
@@ -86,8 +90,9 @@ syntax enable
 set background=dark
 colorscheme solarized
 
-" NERDTree map
+" NERDTree 
 map <leader>n :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 " Gundo map
 map <leader>g :GundoToggle<CR>
