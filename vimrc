@@ -92,7 +92,11 @@ colorscheme solarized
 
 " NERDTree 
 map <leader>n :NERDTreeToggle<CR>
-let NERDTreeShowHidden=1
+" Show hidden files by default
+"let NERDTreeShowHidden=1
+" Open HERDTree automatically if no files were specified on startup
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Gundo map
 map <leader>g :GundoToggle<CR>
