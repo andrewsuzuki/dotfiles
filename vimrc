@@ -7,6 +7,9 @@ syntax on
 " Turn on line numbers
 set number
 
+" Substitute 4 spaces for tabs
+set tabstop=4 shiftwidth=4 expandtab
+
 " Allow backspaces always
 "set backspace=indent,eol,start
 
@@ -38,11 +41,13 @@ Plugin 'Valloric/YouCompleteMe'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'sjl/gundo.vim'
+Plugin 'Yggdroot/indentLine'
 
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'cabin/cabin-colorscheme'
+Plugin 'toupeira/vim-desertink'
 
 " All Plugins must be added before the following line
 call vundle#end()            " required
@@ -79,16 +84,16 @@ let g:Powerline_symbols = "fancy"
 " set timeouts
 set timeoutlen=1000 ttimeoutlen=0
 
-" Solarized Color Scheme
-
+" Enable syntax (important?: put before color scheme)
 syntax enable
-" uncomment for terminal.app, maybe?
-"if !has("gui_running")
-"    let g:solarized_termtrans=1
-"    let g:solarized_termcolors=256
-"endif
+
+" Color Scheme
+"let g:solarized_termcolors=16
+"let g:solarized_visibility = "high"
+"let g:solarized_contrast = "high"
+"let g:solarized_termtrans = 1
 set background=dark
-colorscheme solarized
+colorscheme desertink
 
 " NERDTree 
 map <leader>n :NERDTreeToggle<CR>
@@ -100,3 +105,9 @@ map <leader>n :NERDTreeToggle<CR>
 
 " Gundo map
 map <leader>g :GundoToggle<CR>
+
+" Config statusline scrollbar
+" set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{noscrollbar#statusline()}
+
+" Config indentLine
+let g:indentLine_color_term = 236

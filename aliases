@@ -1,3 +1,6 @@
 # Aliases
 
+alias h="history"
 alias lsl="ls -a"
+alias mkdir="mkdir -p"
+alias ..="cd .."
