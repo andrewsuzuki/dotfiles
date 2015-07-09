@@ -17,6 +17,9 @@ set tabstop=4 shiftwidth=4 expandtab
 set noerrorbells visualbell t_vb=
 autocmd GUIEnter * set visualbell t_vb=
 
+" Use 256 colours
+set t_Co=256
+
 """"""""""""""
 " VUNDLE START
 """"""""""""""
@@ -36,6 +39,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
+Plugin 'bling/vim-airline'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'jeffkreeftmeijer/vim-numbertoggle'
@@ -70,24 +74,15 @@ filetype plugin indent on    " required
 " VUNDLE END
 """"""""""""
 
-" Setup Powerline
-
-" python config
-python from powerline.vim import setup as powerline_setup
-python powerline_setup()
-python del powerline_setup
-set rtp+=$HOME/.local/lib/python2.7/site-packages/powerline/bindings/vim/
-" Always show statusline
-set laststatus=2
-" Use 256 colours (Use this setting only if your terminal supports 256 colours)
-set t_Co=256
-" Use fancy symbols
-let g:Powerline_symbols = "fancy"
-" set timeouts
-set timeoutlen=1000 ttimeoutlen=0
-
 " Enable syntax (important?: put before color scheme)
 syntax enable
+
+" Airline
+set laststatus=2
+let g:airline_powerline_fonts = 1
+set timeoutlen=50 ttimeoutlen=0
+" Hide default status indicator
+set noshowmode
 
 " Color Scheme
 "let g:solarized_termcolors=16
@@ -107,9 +102,6 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Gundo map
 map <leader>g :GundoToggle<CR>
-
-" Config statusline scrollbar
-" set statusline=%<%f\ %h%m%r%=%-14.(%l,%c%V%)\ %{noscrollbar#statusline()}
 
 " Config indentLine
 let g:indentLine_color_term = 236
