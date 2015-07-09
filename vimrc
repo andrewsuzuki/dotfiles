@@ -42,12 +42,14 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'sjl/gundo.vim'
 Plugin 'Yggdroot/indentLine'
+Plugin 'elzr/vim-json'
 
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'flazz/vim-colorschemes'
 Plugin 'cabin/cabin-colorscheme'
 Plugin 'toupeira/vim-desertink'
+Plugin 'zeis/vim-kolor'
 
 " All Plugins must be added before the following line
 call vundle#end()            " required
@@ -100,8 +102,8 @@ map <leader>n :NERDTreeToggle<CR>
 " Show hidden files by default
 "let NERDTreeShowHidden=1
 " Open HERDTree automatically if no files were specified on startup
-" autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Gundo map
 map <leader>g :GundoToggle<CR>
