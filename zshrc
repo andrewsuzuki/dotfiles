@@ -1,6 +1,10 @@
 # Source aliases
 source ~/.aliases
 
+# Use vim as preferred text editor
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/andrew/.oh-my-zsh
 

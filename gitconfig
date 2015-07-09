@@ -1,0 +1,24 @@
+[filter "media"]
+	required = true
+	clean = git media clean %f
+	smudge = git media smudge %f
+[user]
+	name = Andrew Suzuki
+	email = andrew.b.suzuki@gmail.com
+[push]
+	default = simple
+[core]
+    editor = vim
+[alias]
+    ### Add
+    a = add --all
+    ### Commit
+    c = commit
+    cm = commit --message
+    ### Diff
+    d = diff
+    dc = diff --cached
+    ### Status
+    s = status
+    ### Push
+    ps = push

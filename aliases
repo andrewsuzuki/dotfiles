@@ -1,5 +1,6 @@
 # Aliases
 
+alias g="git"
 alias h="history"
 alias lsl="ls -a"
 alias mkdir="mkdir -p"
