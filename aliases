@@ -1,7 +1,13 @@
 # Aliases
 
 alias g="git"
+alias t="tmux"
 alias h="history"
 alias lsl="ls -a"
 alias mkdir="mkdir -p"
 alias ..="cd .."
+
+# Start simple python web server in cwd on port 7777
+alias serve="python3 -m http.server 7777"
+# or on another port
+alias serveon="python3 -m http.server"
