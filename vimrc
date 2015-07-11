@@ -76,6 +76,8 @@ filetype plugin indent on    " required
 
 " Enable syntax (important?: put before color scheme)
 syntax enable
+" Odd-file-specific syntax
+autocmd BufNewFile,BufRead Vagrantfile set syntax=ruby
 
 " Airline
 set laststatus=2
