@@ -47,7 +47,6 @@ Plugin 'jeffkreeftmeijer/vim-numbertoggle'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'sjl/gundo.vim'
 Plugin 'Yggdroot/indentLine'
-Plugin 'elzr/vim-json'
 
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
