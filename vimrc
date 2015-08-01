@@ -49,6 +49,8 @@ Plugin 'sjl/gundo.vim'
 Plugin 'Yggdroot/indentLine'
 Plugin 'mkitt/tabline.vim'
 Plugin 'tpope/vim-fireplace'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'editorconfig/editorconfig-vim'
 
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
@@ -84,7 +86,7 @@ autocmd BufNewFile,BufRead Vagrantfile set syntax=ruby
 " Airline
 set laststatus=2
 let g:airline_powerline_fonts = 1
-set timeoutlen=50 ttimeoutlen=0
+set timeoutlen=1000 ttimeoutlen=0
 " Hide default status indicator
 set noshowmode
 
