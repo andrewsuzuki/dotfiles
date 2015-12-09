@@ -12,12 +12,19 @@
 [alias]
     ### Add
     a = add --all
+    ### Checkout
+    ch = checkout
+    chb = checkout -b
     ### Commit
     c = commit
     cm = commit --message
     ### Diff
     d = diff
     dc = diff --cached
+    ### Log
+    l = log
+    ### Merge
+    m = merge
     ### Status
     s = status
     ### Push

@@ -6,6 +6,7 @@ alias h="history"
 alias lsl="ls -a"
 alias mkdir="mkdir -p"
 alias ..="cd .."
+alias pa="php artisan"
 
 # Start simple python web server in cwd on port 7777
 alias serve="python3 -m http.server 7777"

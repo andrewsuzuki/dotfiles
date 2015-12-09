@@ -61,6 +61,19 @@ plugins=(git)
 # User configuration
 
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/local/go/bin"
+
+# Composer/Homestead
+export PATH="$PATH:$HOME/.composer/vendor/bin"
+
+# PHP 5.6 from http://php-osx.liip.ch/
+export PATH=/usr/local/php5/bin:$PATH
+
+# Maven
+export PATH="$PATH:/usr/local/apache-maven-3.3.3/bin"
+
+# Leiningen
+export PATH="$PATH:/Applications/clojure"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
