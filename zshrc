@@ -59,14 +59,20 @@ ZSH_THEME="awesomepanda"
 plugins=(git)
 
 # User configuration
+export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/usr/local/go/bin"
+# Git
+export PATH=/usr/local/git/bin:$PATH
 
 # Composer/Homestead
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 # PHP 5.6 from http://php-osx.liip.ch/
 export PATH=/usr/local/php5/bin:$PATH
+
+# Go
+export PATH=/usr/local/go/bin:$PATH
+export GOPATH=$HOME/program/go
 
 # Maven
 export PATH="$PATH:/usr/local/apache-maven-3.3.3/bin"
