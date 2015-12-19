@@ -80,6 +80,9 @@ export PATH="$PATH:/usr/local/apache-maven-3.3.3/bin"
 # Leiningen
 export PATH="$PATH:/Applications/clojure"
 
+# LaTeX
+export PATH="$PATH:/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin"
+
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh

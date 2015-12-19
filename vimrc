@@ -51,6 +51,8 @@ Plugin 'mkitt/tabline.vim'
 Plugin 'tpope/vim-fireplace'
 Plugin 'easymotion/vim-easymotion'
 Plugin 'editorconfig/editorconfig-vim'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'rhysd/vim-crystal'
 
 " Color schemes
 Plugin 'altercation/vim-colors-solarized'
@@ -91,8 +93,9 @@ set timeoutlen=1000 ttimeoutlen=0
 set noshowmode
 
 " Color Scheme
-set background=dark
-colorscheme desertink
+"set background=dark
+"colorscheme desertink
+colorscheme onedark
 
 " NERDTree 
 map <leader>n :NERDTreeToggle<CR>
