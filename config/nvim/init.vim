@@ -28,6 +28,7 @@ Plug 'https://github.com/scrooloose/nerdtree' " file explorer
 Plug 'Xuyuanp/nerdtree-git-plugin' " show git status on nerdtree
 Plug 'vim-scripts/ScrollColors' " scroll through color schemes
 Plug 'jeffkreeftmeijer/vim-numbertoggle' " toggle between abs/rel on norm/insert (or toggle with C-n)
+Plug 'christoomey/vim-tmux-navigator' " use c-h,j,k,l for navigation between windows/panes in vim/tmux
 
 " Language support
 Plug 'rhysd/vim-crystal' " crystal
@@ -118,11 +119,11 @@ let g:startify_custom_header = my_ascii_header
 """"""""
 " Remaps
 
-" Switch windows using just C-<h,j,k,l>
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" Resize windows using <Tab><h,j,k,l>
+nnoremap <Tab>h :vertical resize +2<cr>
+nnoremap <Tab>j :resize +2<cr>
+nnoremap <Tab>k :resize -2<cr>
+nnoremap <Tab>l :vertical resize -2<cr>
 
 """"""""""""""""
 " Misc Functions
