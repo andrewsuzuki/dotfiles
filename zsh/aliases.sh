@@ -17,7 +17,7 @@ alias serve="python3 -m http.server 7777"
 alias serveon="python3 -m http.server"
 
 # mkdir && cd
-mcdir()
+mcd()
 {
     if [ ${1} ]
     then

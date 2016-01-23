@@ -3,7 +3,6 @@
 - link:
     ~/.zshrc: zshrc
     ~/.zsh: zsh/
-    ~/.aliases: aliases
     ~/.gitconfig: gitconfig
     ~/.tmux.conf: tmux.conf
     ~/.tmuxline-snapshot: tmuxline-snapshot
