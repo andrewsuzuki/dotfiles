@@ -4,9 +4,9 @@ if [[ `uname` == 'Darwin' ]]
 then
     # The flag for dereferencing symlinks is
     # different on OS X (-h)
-    ln -sfFh ~/.dotfiles/config/ ~/.config
+    ln -sfFh ~/.dotfiles/config ~/.config
 else
-    ln -sfFn ~/.dotfiles/config/ ~/.config
+    ln -sfFn ~/.dotfiles/config ~/.config
 fi
 
 ln -sf ~/.dotfiles/zsh/init.sh ~/.zshrc
