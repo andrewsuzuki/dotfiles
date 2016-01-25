@@ -1,18 +1,18 @@
 # Source os detection (primitive)
-source ~/.zsh/detect-os.sh
+source ~/.dotfiles/zsh/detect-os.sh
 
 # Source misc functions
-source ~/.zsh/functions.sh
+source ~/.dotfiles/zsh/functions.sh
 
 # Source aliases
-source ~/.zsh/aliases.sh
+source ~/.dotfiles/zsh/aliases.sh
 
 # Source PATH
 if [[ "$IS_DARWIN" == "1" ]]
 then
-    source ~/.zsh/path-darwin.sh
+    source ~/.dotfiles/zsh/path-darwin.sh
 else
-    source ~/.zsh/path-linux.sh
+    source ~/.dotfiles/zsh/path-linux.sh
 fi
 
 # Use neovim as preferred text editor
@@ -70,8 +70,11 @@ export XDG_CONFIG_HOME=$HOME/.config
 # Neovim
 export NVIM_TUI_ENABLE_TRUE_COLOR=1 # enable true 24-bit color
 
-# Set GOPATH
-export GOPATH=$HOME/program/go
+# Set GOPATH on Darwin
+if [[ "$IS_DARWIN" == "1" ]]
+then
+    export GOPATH=$HOME/program/go
+fi
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

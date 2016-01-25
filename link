@@ -1,0 +1,7 @@
+#!/bin/bash
+
+ln -sfFh ~/.dotfiles/config/ ~/.config
+ln -sf ~/.dotfiles/zsh/init.sh ~/.zshrc
+ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
+ln -sf ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
+ln -sf ~/.dotfiles/tmux/tmuxline-snapshot ~/.tmuxline-snapshot
