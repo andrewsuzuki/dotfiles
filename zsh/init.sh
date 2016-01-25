@@ -20,7 +20,7 @@ export VISUAL=nvim
 export EDITOR=$VISUAL
 
 # Path to the oh-my-zsh installation
-export ZSH=/Users/andrew/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Name of the theme to load (~/.oh-my-zsh/themes)
 # (or use "random" for a random theme
