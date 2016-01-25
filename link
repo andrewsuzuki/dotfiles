@@ -1,6 +1,14 @@
 #!/bin/bash
 
-ln -sfFh ~/.dotfiles/config/ ~/.config
+if [[ `uname` == 'Darwin' ]]
+then
+    # The flag for dereferencing symlinks is
+    # different on OS X (-h)
+    ln -sfFh ~/.dotfiles/config/ ~/.config
+else
+    ln -sfFn ~/.dotfiles/config/ ~/.config
+fi
+
 ln -sf ~/.dotfiles/zsh/init.sh ~/.zshrc
 ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
 ln -sf ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
