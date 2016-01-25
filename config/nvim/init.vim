@@ -19,19 +19,23 @@ Plug 'benjie/neomake-local-eslint.vim' " use local eslint, not global
 Plug 'Yggdroot/indentLine' " show indent indicators
 Plug 'tpope/vim-commentary' " easy comments
 Plug 'editorconfig/editorconfig-vim' " editorconfig
-Plug 'airblade/vim-gitgutter' " show git diff in gutter
+"Plug 'airblade/vim-gitgutter' " show git diff in gutter
 Plug 'easymotion/vim-easymotion' " easy motion
 Plug 'mhinz/vim-startify' " nice startup screen
 Plug 'ctrlpvim/ctrlp.vim' " ctrl-p fzf
-Plug 'vim-airline/vim-airline' " airline statusline
+"Plug 'vim-airline/vim-airline' " airline statusline
 Plug 'https://github.com/scrooloose/nerdtree' " file explorer
 Plug 'Xuyuanp/nerdtree-git-plugin' " show git status on nerdtree
 Plug 'vim-scripts/ScrollColors' " scroll through color schemes
 Plug 'jeffkreeftmeijer/vim-numbertoggle' " toggle between abs/rel on norm/insert (or toggle with C-n)
 Plug 'christoomey/vim-tmux-navigator' " use c-h,j,k,l for navigation between windows/panes in vim/tmux
+Plug 'Shougo/deoplete.nvim' " async autocompletion
+"Plug 'terryma/vim-smooth-scroll' " smooth scrolling (can map C-u,d,b,f)
 
 " Language support
 Plug 'rhysd/vim-crystal' " crystal
+Plug 'rust-lang/rust.vim' " rust
+Plug 'cespare/vim-toml' " toml
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx' " js (improved indentation/syntax)
 
 " Color schemes
@@ -49,6 +53,11 @@ Plug 'jonathanfilip/vim-lucius' " lucius
 call plug#end()
 """"""""""""
 
+" timeouts
+set ttimeout
+set ttimeoutlen=100 " time to wait for key sequence next 
+set timeoutlen=100 " time to wait for mapped sequence next
+
 " Set leader key to comma
 let mapleader=','
 
@@ -59,7 +68,7 @@ set tabstop=4 shiftwidth=4 expandtab
 set backspace=indent,eol,start
 
 " Set color scheme
-colorscheme onedark
+colorscheme gotham
 
 " Disable terminal bells (audio + visual)
 set noerrorbells visualbell t_vb=
@@ -98,7 +107,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:airline_left_sep='' " no poorly-fitting arrows
 let g:airline_right_sep='' " no poorly-fitting arrows
 set laststatus=2 " always show airline
-set noshowmode " don't show the mode in the vanilla location
+" set noshowmode " don't show the mode in the vanilla location
 
 " Configure indentLine
 let g:indentLine_char = '☡' " some good options: ☡,▏
@@ -119,11 +128,16 @@ let g:startify_custom_header = my_ascii_header
 """"""""
 " Remaps
 
-" Resize windows using <Tab><h,j,k,l>
-nnoremap <Tab>h :vertical resize +2<cr>
-nnoremap <Tab>j :resize +2<cr>
-nnoremap <Tab>k :resize -2<cr>
-nnoremap <Tab>l :vertical resize -2<cr>
+:tnoremap <C-h> <C-\><C-n><C-h>
+:tnoremap <C-j> <C-\><C-n><C-j>
+:tnoremap <C-k> <C-\><C-n><C-k>
+:tnoremap <C-l> <C-\><C-n><C-l>
+
+" Resize windows using <Alt-h,j,k,l>
+nnoremap ˙ :vertical resize +2<cr>
+nnoremap ∆ :resize +2<cr>
+nnoremap ˚ :resize -2<cr>
+nnoremap ¬ :vertical resize -2<cr>
 
 """"""""""""""""
 " Misc Functions

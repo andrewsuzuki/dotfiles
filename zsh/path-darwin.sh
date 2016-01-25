@@ -1,4 +1,4 @@
-# Form the $PATH
+# Form the $PATH for Darwin
 
 # The usual suspects
 export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"

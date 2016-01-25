@@ -1,8 +1,19 @@
+# Source os detection (primitive)
+source ~/.zsh/detect-os.sh
+
+# Source misc functions
+source ~/.zsh/functions.sh
+
 # Source aliases
 source ~/.zsh/aliases.sh
 
 # Source PATH
-source ~/.zsh/path.sh
+if [[ "$IS_DARWIN" == "1" ]]
+then
+    source ~/.zsh/path-darwin.sh
+else
+    source ~/.zsh/path-linux.sh
+fi
 
 # Use neovim as preferred text editor
 export VISUAL=nvim
