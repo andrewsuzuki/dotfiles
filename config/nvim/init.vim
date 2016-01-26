@@ -121,6 +121,9 @@ let g:neomake_javascript_enabled_makers = ['eslint']
 " Run neomake on every read or write
 autocmd! BufWritePost * Neomake
 
+" Configure Ctrl-p
+let g:ctrlp_custom_ignore = '\v[\/](vendor|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
 " Configure startify
 execute 'source ' . $HOME . '/.config/nvim/ascii-header.vim'
 let g:startify_custom_header = my_ascii_header
