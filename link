@@ -8,10 +8,13 @@ then
     ln -sfFh ~/.dotfiles/config ~/.config
 else
     ln -sfFn ~/.dotfiles/config ~/.config
-    ln -sfFn ~/.dotfiles/i3 ~/.i3 # only on linux
 fi
 
 ln -sf ~/.dotfiles/zsh/init.sh ~/.zshrc
 ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
 ln -sf ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/tmux/tmuxline-snapshot ~/.tmuxline-snapshot
+
+ln -sf ~/.dotfiles/xinitrc ~/.xinitrc
+ln -sf ~/.dotfiles/Xresources ~/.Xresources
+ln -sf ~/.dotfiles/Xmodmap ~/.Xmodmap
