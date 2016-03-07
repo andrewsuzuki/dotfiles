@@ -18,3 +18,5 @@ ln -sf ~/.dotfiles/tmux/tmuxline-snapshot ~/.tmuxline-snapshot
 ln -sf ~/.dotfiles/xinitrc ~/.xinitrc
 ln -sf ~/.dotfiles/Xresources ~/.Xresources
 ln -sf ~/.dotfiles/Xmodmap ~/.Xmodmap
+
+ln -sf ~/.dotfiles/fehbg ~/.fehbg
