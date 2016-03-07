@@ -19,24 +19,28 @@ Plug 'benjie/neomake-local-eslint.vim' " use local eslint, not global
 Plug 'Yggdroot/indentLine' " show indent indicators
 Plug 'tpope/vim-commentary' " easy comments
 Plug 'editorconfig/editorconfig-vim' " editorconfig
-"Plug 'airblade/vim-gitgutter' " show git diff in gutter
+Plug 'airblade/vim-gitgutter' " show git diff in gutter
 Plug 'easymotion/vim-easymotion' " easy motion
 Plug 'mhinz/vim-startify' " nice startup screen
 Plug 'ctrlpvim/ctrlp.vim' " ctrl-p fzf
-"Plug 'vim-airline/vim-airline' " airline statusline
+Plug 'rking/ag.vim' " ag.vim (the_silver_searcher)
+Plug 'skammer/vim-css-color' " highlight colors in css files
+Plug 'vim-airline/vim-airline' " airline statusline
 Plug 'https://github.com/scrooloose/nerdtree' " file explorer
 Plug 'Xuyuanp/nerdtree-git-plugin' " show git status on nerdtree
 Plug 'vim-scripts/ScrollColors' " scroll through color schemes
 Plug 'jeffkreeftmeijer/vim-numbertoggle' " toggle between abs/rel on norm/insert (or toggle with C-n)
 Plug 'christoomey/vim-tmux-navigator' " use c-h,j,k,l for navigation between windows/panes in vim/tmux
 Plug 'Shougo/deoplete.nvim' " async autocompletion
-"Plug 'terryma/vim-smooth-scroll' " smooth scrolling (can map C-u,d,b,f)
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " Language support
 Plug 'rhysd/vim-crystal' " crystal
 Plug 'rust-lang/rust.vim' " rust
 Plug 'cespare/vim-toml' " toml
 Plug 'pangloss/vim-javascript' | Plug 'mxw/vim-jsx' " js (improved indentation/syntax)
+Plug 'lambdatoast/elm.vim'
 
 " Color schemes
 Plug 'whatyouhide/vim-gotham' " gotham / gotham256
@@ -68,7 +72,10 @@ set tabstop=4 shiftwidth=4 expandtab
 set backspace=indent,eol,start
 
 " Set color scheme
-colorscheme gotham
+colorscheme onedark
+
+" Enable deoplete
+let g:deoplete#enable_at_startup = 1
 
 " Disable terminal bells (audio + visual)
 set noerrorbells visualbell t_vb=
@@ -141,6 +148,9 @@ nnoremap ˙ :vertical resize +2<cr>
 nnoremap ∆ :resize +2<cr>
 nnoremap ˚ :resize -2<cr>
 nnoremap ¬ :vertical resize -2<cr>
+
+" Save with sudo
+command! -nargs=0 Sw w !sudo tee % > /dev/null
 
 """"""""""""""""
 " Misc Functions

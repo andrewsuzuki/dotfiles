@@ -7,6 +7,9 @@ source ~/.dotfiles/zsh/functions.sh
 # Source aliases
 source ~/.dotfiles/zsh/aliases.sh
 
+# Source z
+source ~/Program/z-master/z.sh
+
 # Source PATH
 if [[ "$IS_DARWIN" == "1" ]]
 then
@@ -45,10 +48,10 @@ DISABLE_LS_COLORS="false"
 DISABLE_AUTO_TITLE="false"
 
 # Enable command auto-correction
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 # Display red dots whilst waiting for completion
-COMPLETION_WAITING_DOTS="true"
+COMPLETION_WAITING_DOTS="false"
 
 # Don't disable marking untracked files under VCS as dirty. Marking this true
 # makes repository status check for large repositories much, much faster.
@@ -62,7 +65,7 @@ HIST_STAMPS="yyyy-mm-dd"
 ZSH_CUSTOM=$ZSH/custom # (default)
 
 # Space-separated plugins to load (from ~/.oh-my-zsh/plugins)
-plugins=(git)
+plugins=(git zsh-autosuggestions)
 
 # XDG_CONFIG_HOME for whatever needs it (like Neovim)
 export XDG_CONFIG_HOME=$HOME/.config
@@ -89,3 +92,5 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
