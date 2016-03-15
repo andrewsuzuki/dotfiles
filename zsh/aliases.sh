@@ -24,3 +24,5 @@ alias e_z="vim ~/.zshrc" # zshrc
 alias serve="python3 -m http.server 7777"
 # ...or on another port
 alias serveon="python3 -m http.server"
+
+alias subl="/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl"
