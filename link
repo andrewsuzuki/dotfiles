@@ -6,8 +6,12 @@ then
     # different on OS X (-h)
 
     ln -sfFh ~/.dotfiles/config ~/.config
+
+    ln -sfFh ~/.dotfiles/emacs.d ~/.emacs.d
 else
     ln -sfFn ~/.dotfiles/config ~/.config
+
+    ln -sfFn ~/.dotfiles/emacs.d ~/.emacs.d
 fi
 
 ln -sf ~/.dotfiles/zsh/profile.sh ~/.zshenv
