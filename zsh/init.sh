@@ -1,5 +1,5 @@
-# Source os detection (primitive)
-source ~/.dotfiles/zsh/detect-os.sh
+# Source secrets
+source ~/.secrets.sh
 
 # Source misc functions
 source ~/.dotfiles/zsh/functions.sh
@@ -10,24 +10,9 @@ source ~/.dotfiles/zsh/aliases.sh
 # Source z
 source ~/Program/z-master/z.sh
 
-# Source PATH
-if [[ "$IS_DARWIN" == "1" ]]
-then
-    source ~/.dotfiles/zsh/path-darwin.sh
-else
-    source ~/.dotfiles/zsh/path-linux.sh
-fi
-
-# Use neovim as preferred text editor
-export VISUAL=nvim
-export EDITOR=$VISUAL
-
-# Path to the oh-my-zsh installation
-export ZSH=$HOME/.oh-my-zsh
-
 # Name of the theme to load (~/.oh-my-zsh/themes)
 # (or use "random" for a random theme
-ZSH_THEME="fino"
+ZSH_THEME="sorin"
 
 # Use case-insensitive auto-completion
 CASE_SENSITIVE="false"
@@ -65,7 +50,7 @@ HIST_STAMPS="yyyy-mm-dd"
 ZSH_CUSTOM=$ZSH/custom # (default)
 
 # Space-separated plugins to load (from ~/.oh-my-zsh/plugins)
-plugins=(git zsh-autosuggestions)
+plugins=(git)
 
 # XDG_CONFIG_HOME for whatever needs it (like Neovim)
 export XDG_CONFIG_HOME=$HOME/.config
@@ -92,5 +77,3 @@ source $ZSH/oh-my-zsh.sh
 
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

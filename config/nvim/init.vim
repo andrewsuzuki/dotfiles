@@ -5,6 +5,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
+set t_Co=256
+
 """"""""""""
 call plug#begin('~/.config/nvim/plugged')
 """"""""""""
@@ -19,21 +21,21 @@ Plug 'benjie/neomake-local-eslint.vim' " use local eslint, not global
 Plug 'Yggdroot/indentLine' " show indent indicators
 Plug 'tpope/vim-commentary' " easy comments
 Plug 'editorconfig/editorconfig-vim' " editorconfig
-Plug 'airblade/vim-gitgutter' " show git diff in gutter
+" Plug 'airblade/vim-gitgutter' " show git diff in gutter
 Plug 'easymotion/vim-easymotion' " easy motion
-Plug 'mhinz/vim-startify' " nice startup screen
+" Plug 'mhinz/vim-startify' " nice startup screen
 Plug 'ctrlpvim/ctrlp.vim' " ctrl-p fzf
 Plug 'rking/ag.vim' " ag.vim (the_silver_searcher)
 Plug 'skammer/vim-css-color' " highlight colors in css files
-Plug 'vim-airline/vim-airline' " airline statusline
+" Plug 'vim-airline/vim-airline' " airline statusline
 Plug 'https://github.com/scrooloose/nerdtree' " file explorer
 Plug 'Xuyuanp/nerdtree-git-plugin' " show git status on nerdtree
 Plug 'vim-scripts/ScrollColors' " scroll through color schemes
 Plug 'jeffkreeftmeijer/vim-numbertoggle' " toggle between abs/rel on norm/insert (or toggle with C-n)
 Plug 'christoomey/vim-tmux-navigator' " use c-h,j,k,l for navigation between windows/panes in vim/tmux
 Plug 'Shougo/deoplete.nvim' " async autocompletion
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+" Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
 
 " Language support
 Plug 'rhysd/vim-crystal' " crystal
@@ -72,7 +74,7 @@ set tabstop=4 shiftwidth=4 expandtab
 set backspace=indent,eol,start
 
 " Set color scheme
-colorscheme onedark
+colorscheme gotham256
 
 " Enable deoplete
 let g:deoplete#enable_at_startup = 1
@@ -111,9 +113,9 @@ let g:NERDTreeDirArrowCollapsible = '⇩'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Configure airline
-let g:airline_left_sep='' " no poorly-fitting arrows
-let g:airline_right_sep='' " no poorly-fitting arrows
-set laststatus=2 " always show airline
+" let g:airline_left_sep='' " no poorly-fitting arrows
+" let g:airline_right_sep='' " no poorly-fitting arrows
+" set laststatus=2 " always show airline
 " set noshowmode " don't show the mode in the vanilla location
 
 " Configure indentLine
@@ -132,8 +134,8 @@ autocmd! BufWritePost * Neomake
 let g:ctrlp_custom_ignore = '\v[\/](vendor|node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 
 " Configure startify
-execute 'source ' . $HOME . '/.config/nvim/ascii-header.vim'
-let g:startify_custom_header = my_ascii_header
+" execute 'source ' . $HOME . '/.config/nvim/ascii-header.vim'
+" let g:startify_custom_header = my_ascii_header
 
 """"""""
 " Remaps

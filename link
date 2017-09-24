@@ -10,8 +10,13 @@ else
     ln -sfFn ~/.dotfiles/config ~/.config
 fi
 
+ln -sf ~/.dotfiles/zsh/profile.sh ~/.zshenv
+ln -sf ~/.dotfiles/zsh/profile.sh ~/.bash_profile
+
 ln -sf ~/.dotfiles/zsh/init.sh ~/.zshrc
+
 ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
+
 ln -sf ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -sf ~/.dotfiles/tmux/tmuxline-snapshot ~/.tmuxline-snapshot
 
