@@ -14,7 +14,7 @@
  '(helm-mode t)
  '(package-selected-packages
    (quote
-    (req-package symon free-keys git-gutter magit helm-projectile projectile evil-tabs echo-bell editorconfig ace-window general switch-window exec-path-from-shell helm-ag helm-descbinds helm evil-org sx evil-commentary linum-relative dracula-theme use-package solarized-theme nyan-mode moe-theme evil-surround evil-leader evil-indent-textobject doom-themes color-theme-solarized color-theme-sanityinc-solarized)))
+    (company-tern company winum req-package symon free-keys git-gutter magit helm-projectile projectile evil-tabs echo-bell editorconfig ace-window general switch-window exec-path-from-shell helm-ag helm-descbinds helm evil-org sx evil-commentary linum-relative dracula-theme use-package solarized-theme nyan-mode moe-theme evil-surround evil-leader evil-indent-textobject doom-themes color-theme-solarized color-theme-sanityinc-solarized)))
  '(tool-bar-mode nil)
  '(vc-annotate-background nil)
  '(vc-annotate-color-map

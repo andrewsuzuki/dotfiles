@@ -163,9 +163,8 @@
   ;; Substitute the vim C-u behavior for the emacs universal argument
   (setq evil-want-C-u-scroll t)
   :config
-  (progn
-    ;; enable
-    (evil-mode 1)))
+  ;; enable
+  (evil-mode 1))
 
 ;; elscreen
 ;; Browser-like tabs
@@ -209,11 +208,10 @@
 ;; Relative line numbers
 (use-package linum-relative
   :config
-  (progn
-    ;; enable linum (emacs built-in)
-    (global-linum-mode 1)
-    ;; make them relative
-    (linum-relative-on)))
+  ;; enable linum (emacs built-in)
+  (global-linum-mode 1)
+  ;; make them relative
+  (linum-relative-on))
 
 ;; avy
 ;; (jump using character)
@@ -257,15 +255,12 @@
 ;; helm
 (use-package helm
   :diminish helm-mode
-  :init
-  (progn
-    (require 'helm-config)
+  :init (require 'helm-config)
+        (setq helm-M-x-fuzzy-match t)
+        (setq helm-grep-ag-command "rg --color=always --colors 'match:fg:black' --colors 'match:bg:yellow' --smart-case --no-heading --line-number %s %s %s")
+        (setq helm-grep-ag-pipe-cmd-switches '("--colors 'match:fg:black'" "--colors 'match:bg:yellow'"))
 
-    (setq helm-M-x-fuzzy-match t)
-    (setq helm-grep-ag-command "rg --color=always --colors 'match:fg:black' --colors 'match:bg:yellow' --smart-case --no-heading --line-number %s %s %s")
-    (setq helm-grep-ag-pipe-cmd-switches '("--colors 'match:fg:black'" "--colors 'match:bg:yellow'"))
-
-    (helm-mode 1))
+        (helm-mode 1)
   :bind (("C-c h" . helm-mini)
          ("C-h a" . helm-apropos)
          ("C-x C-b" . helm-buffers-list)
@@ -306,3 +301,14 @@
              symon-darwin-network-tx-monitor))))
   :config
   (symon-mode))
+
+;; company
+;; completion framework
+(use-package company
+  :config
+  (global-company-mode))
+
+;; js completion
+(use-package company-tern
+  :config
+  (add-to-list 'company-backends 'company-tern))
