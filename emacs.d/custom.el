@@ -9,7 +9,7 @@
  '(fci-rule-color "#eee8d5")
  '(package-selected-packages
    (quote
-    (helm-projectile helm-descbinds helm projectile magit dracula-theme general free-keys nyan-mode linum-relative git-gutter editorconfig elscreen ace-window echo-bell exec-path-from-shell evil-org evil-indent-textobject evil-commentary evil-surround evil company-tern company load-dir req-package use-package-chords use-package)))
+    (git-gutter-fringe company-quickhelp helm-projectile helm-descbinds helm projectile magit dracula-theme general free-keys nyan-mode linum-relative editorconfig elscreen ace-window echo-bell exec-path-from-shell evil-org evil-indent-textobject evil-commentary evil-surround evil company-tern company load-dir req-package use-package-chords use-package)))
  '(tool-bar-mode nil))
 
 (custom-set-faces

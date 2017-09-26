@@ -18,19 +18,23 @@
     "a" 'avy-goto-char-2
     "b" 'helm-buffers-list
     "c" 'evil-commentary-line
+    ;; d
     "e b" 'eval-buffer
     "f" 'helm-find-files
-    "g" (lambda ()
-         (interactive)
-         (evil-scroll-up 5))
-    "h" (lambda ()
-         (interactive)
-         (evil-scroll-down 5))
+    ;; g h i j k l
     "m" 'helm-mini
+    ;; n o
+    "p" 'helm-projectile-find-file
+    ;; q
     "r" 'helm-do-grep-ag
     "s" 'close-window
     "t n" 'elscreen-create
     "t w" 'elscreen-kill
+    "u" 'universal-argument
+    ;; v
+    "w" 'ace-window
+    "x" 'helm-M-x
+    ;; y z
     "`" (elscreen-make-goto-lambda 0)
     "1" (elscreen-make-goto-lambda 1)
     "2" (elscreen-make-goto-lambda 2)
@@ -39,9 +43,6 @@
     "5" (elscreen-make-goto-lambda 5)
     "6" (elscreen-make-goto-lambda 6)
     "7" (elscreen-make-goto-lambda 7)
-    "8" (elscreen-make-goto-lambda 8)
-    "u" 'universal-argument
-    "w" 'ace-window
-    "x" 'helm-M-x))
+    "8" (elscreen-make-goto-lambda 8)))
 
 (provide 'init-general)

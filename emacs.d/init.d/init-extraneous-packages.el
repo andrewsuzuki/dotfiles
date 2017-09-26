@@ -31,9 +31,9 @@
   :diminish editorconfig-mode
   :config (editorconfig-mode 1))
 
-;; git-gutter
-;; NOTE visually collides with linum a bit, consider another package
-(req-package git-gutter
+;; git-gutter-fringe
+;; (gui-only)
+(req-package git-gutter-fringe
   :config
   (global-git-gutter-mode +1))
 
