@@ -3,6 +3,7 @@
 ;; Company
 ;; completion framework
 (req-package company
+  :diminish company-mode
   :config (global-company-mode))
 
 ;; Show documentation for completion options

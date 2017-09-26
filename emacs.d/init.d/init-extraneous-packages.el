@@ -34,6 +34,7 @@
 ;; git-gutter-fringe
 ;; (gui-only)
 (req-package git-gutter-fringe
+  :diminish git-gutter-mode
   :config
   (global-git-gutter-mode +1))
 
@@ -57,5 +58,10 @@
 ;; free-keys
 ;; show free bindings in current buffer
 (req-package free-keys)
+
+;; smart-mode-line
+(req-package smart-mode-line
+  :init (setq sml/theme 'dark)
+  :config (sml/setup))
 
 (provide 'init-extraneous-packages)
