@@ -1,8 +1,8 @@
 ;; Start emacs server
 
-;;(require 'server)
-;;(unless (server-running-p)
- ;; (server-start)
+;; (require 'server)
+;; (unless (server-running-p)
+;;   (server-start))
 
 ;; Recompile configs
 

@@ -1,3 +1,5 @@
+;; Need to include this commented-out to satisfy package.el
+;; Later called in init-real.el
 ;; (package-initialize)
 
 (require 'package)

@@ -2,7 +2,7 @@
 
 ;; Symon
 ;; display system monitor in minibuffer during idle
-(use-package symon
+(req-package symon
   :init
   (setq symon-sparkline-type 'gridded)
   (setq symon-monitors
