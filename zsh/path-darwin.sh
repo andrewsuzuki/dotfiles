@@ -26,3 +26,6 @@ export PATH=/Library/TeX/Distributions/.DefaultTeX/Contents/Programs/texbin:$PAT
 
 # Supercollider (scsnyth)
 export PATH=/Applications/SuperCollider/SuperCollider.app/Contents/Resources:$PATH
+
+# VS Code (code)
+export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH

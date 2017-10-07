@@ -8,6 +8,6 @@
 ;; Integration with helm
 (req-package helm-projectile
   :require helm projectile
-  :config (helm-projectile-on))
+  :config (helm-projectile-toggle 1))
 
 (provide 'init-projectile)

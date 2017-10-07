@@ -43,6 +43,8 @@
 
 (require-package 'use-package)
 (require 'use-package)
+(require 'diminish)
+(require 'bind-key)
 
 ;; el-get
 
