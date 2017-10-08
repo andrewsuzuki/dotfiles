@@ -29,3 +29,7 @@ export PATH=/Applications/SuperCollider/SuperCollider.app/Contents/Resources:$PA
 
 # VS Code (code)
 export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
+
+# Yarn
+export PATH=$HOME/.yarn/bin:$PATH
+
