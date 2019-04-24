@@ -6,8 +6,12 @@ export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin"
 # Git
 export PATH=/usr/local/git/bin:$PATH
 
+# Macports
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+
 # Composer global vendors (homestead, phpunit, etc)
 export PATH=$HOME/.composer/vendor/bin:$PATH
+export PATH=$HOME/.config/composer/vendor/bin:$PATH
 
 # PHP 5.6 (from http://php-osx.liip.ch/)
 export PATH=/usr/local/php5/bin:$PATH
@@ -33,3 +37,5 @@ export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$P
 # Yarn
 export PATH=$HOME/.yarn/bin:$PATH
 
+# Rustup
+export PATH=$HOME/.cargo/bin:$PATH
