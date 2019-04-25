@@ -1,9 +1,5 @@
 # Aliases
 
-# override vi/vim with nvim
-alias vi="nvim"
-alias vim="nvim"
-
 # simple
 alias ..="cd .."
 alias lsa="ls -a"

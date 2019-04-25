@@ -1,3 +1,6 @@
+# .zshenv
+# Sourced at start of every shell (before .zshrc and .zprofile) and script
+
 # Set $IS_DARWIN, $IS_LINUX, $PATH, $VISUAL, $EDITOR, $PAGER, $ZSH
 
 # Source os detection (primitive)
@@ -16,7 +19,7 @@ fi
 if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 
 # Use emacs as preferred text editor
-export VISUAL=emacs
+export VISUAL=vim
 export EDITOR=$VISUAL
 export PAGER=less
 

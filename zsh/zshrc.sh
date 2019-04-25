@@ -8,11 +8,11 @@ source ~/.dotfiles/zsh/functions.sh
 source ~/.dotfiles/zsh/aliases.sh
 
 # Source z
-source ~/Program/z-master/z.sh
+# source ~/Program/z-master/z.sh
 
 # Name of the theme to load (~/.oh-my-zsh/themes)
 # (or use "random" for a random theme
-ZSH_THEME="sorin"
+ZSH_THEME="dpoggi"
 
 # Use case-insensitive auto-completion
 CASE_SENSITIVE="false"

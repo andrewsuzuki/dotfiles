@@ -14,10 +14,9 @@ else
     ln -sfFn ~/.dotfiles/emacs.d ~/.emacs.d
 fi
 
-ln -sf ~/.dotfiles/zsh/profile.sh ~/.zshenv
-ln -sf ~/.dotfiles/zsh/profile.sh ~/.bash_profile
-
-ln -sf ~/.dotfiles/zsh/init.sh ~/.zshrc
+ln -sf ~/.dotfiles/zsh/zshenv.sh ~/.zshenv
+ln -sf ~/.dotfiles/zsh/zprofile.sh ~/.zprofile
+ln -sf ~/.dotfiles/zsh/zshrc.sh ~/.zshrc
 
 ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
 
