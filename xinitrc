@@ -32,12 +32,32 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-# Feh
+# gnome-keyring
+# https://wiki.archlinux.org/index.php/GNOME/Keyring#xinitrc_method
+dbus-update-activation-environment --systemd DISPLAY
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
+export SSH_AUTH_SOCK
 
-sh ~/.fehbg
+# Desktop background
+# Feh (disabled)
+# sh ~/.fehbg
+# xsetroot to plain color (win95 teal)
+xsetroot -solid '#008080'
 
 # Set DPI
 xrandr --dpi 220
+
+# xbindkeys
+xbindkeys
+
+# udiskie (drive auto-mount)
+udiskie &
+
+# autorandr (xrandr)
+scripts/keys/autorandr-conditional-load.sh
+
+# qt (use qt5ct config tool)
+export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # i3
 exec i3

@@ -19,9 +19,11 @@ fi
 if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
 
 # Use emacs as preferred text editor
-export VISUAL=vim
+export VISUAL=nvim
 export EDITOR=$VISUAL
 export PAGER=less
+export TERMINAL=termite
+export BROWSER=google-chrome-stable
 
 # Path to the oh-my-zsh installation
 export ZSH=$HOME/.oh-my-zsh

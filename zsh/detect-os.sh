@@ -1,16 +1,12 @@
 # Detect operating system
 
-if [[ `uname` == 'Linux' ]]
-then
-    export IS_LINUX=1
-else
-    export IS_LINUX=
+UNAME=`uname`
+
+if [[ $UNAME == 'Linux' ]]; then
+    IS_LINUX=1
+elif [[ $UNAME == 'DARWIN' ]]; then
+    IS_DARWIN=1
 fi
 
-if [[ `uname` == 'Darwin' ]]
-then
-        export IS_DARWIN=1
-else
-        export IS_DARWIN=
-fi
-
+export IS_LINUX
+export IS_DARWIN
