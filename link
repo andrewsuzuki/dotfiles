@@ -6,11 +6,9 @@ then
     # different on OS X (-h)
 
     ln -sfFh ~/.dotfiles/config ~/.config
-
     ln -sfFh ~/.dotfiles/emacs.d ~/.emacs.d
 else
     ln -sfFn ~/.dotfiles/config ~/.config
-
     ln -sfFn ~/.dotfiles/emacs.d ~/.emacs.d
 fi
 
@@ -20,11 +18,6 @@ ln -sf ~/.dotfiles/zsh/zshrc.sh ~/.zshrc
 
 ln -sf ~/.dotfiles/gitconfig ~/.gitconfig
 
-ln -sf ~/.dotfiles/tmux/tmux.conf ~/.tmux.conf
-ln -sf ~/.dotfiles/tmux/tmuxline-snapshot ~/.tmuxline-snapshot
-
 ln -sf ~/.dotfiles/xinitrc ~/.xinitrc
 ln -sf ~/.dotfiles/Xresources ~/.Xresources
 ln -sf ~/.dotfiles/Xmodmap ~/.Xmodmap
-
-ln -sf ~/.dotfiles/fehbg ~/.fehbg
