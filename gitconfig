@@ -8,30 +8,30 @@
 [push]
 	default = simple
 [core]
-    editor = vim
+	editor = vim
 	ignorecase = false
 [alias]
-    ### Add
-    a = add --all
-    ### Checkout
-    ch = checkout
-    chb = checkout -b
-    ### Commit
-    c = commit
-    cm = commit --message
-    ### Diff
-    d = diff
-    dj = "!git diff --color $@ | diff-so-fancy | less"
-    dc = diff --cached
-    dcj = "!git diff --cached --color $@ | diff-so-fancy | less"
-    ### Log
-    l = log
-    ### Merge
-    m = merge
-    ### Status
-    s = status
-    ### Push
-    ps = push
+	### Add
+	a = add --all
+	### Checkout
+	ch = checkout
+	chb = checkout -b
+	### Commit
+	c = commit
+	cm = commit --message
+	### Diff
+	d = diff
+	dj = "!git diff --color $@ | diff-so-fancy | less"
+	dc = diff --cached
+	dcj = "!git diff --cached --color $@ | diff-so-fancy | less"
+	### Log
+	l = log
+	### Merge
+	m = merge
+	### Status
+	s = status
+	### Push
+	ps = push
 [http "https://git.demo.localflynn.com"]
 	sslCAInfo = /Users/andrew/.flynn/ca-certs/demo-virtualbox.pem
 [credential "https://git.demo.localflynn.com"]
