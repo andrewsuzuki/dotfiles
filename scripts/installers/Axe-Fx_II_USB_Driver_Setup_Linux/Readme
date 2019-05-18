@@ -1,0 +1,22 @@
+This installer will install the Axe-Fx II USB Audio Class 2.0 firmware and firmware daemon.
+
+System Requirements:
+LINUX kernel 2.6.35+, udev, fxload
+
+Notes:
+The Axe-Fx II relies on the host computer to upload the USB firmware when connecting to the host after a reboot. The USB firmware daemon resides on the host computer and is responsible for uploading the USB firmware silently as needed. This is achieved by a udev rule executing a program named "fxload" (http://sourceforge.net/projects/linux-hotplug/files/fxload/). If fxload is not already present on your system you will have to install it prior to running the script named "axefx2setup.sh". Otherwise the script will abort.
+
+Run the script with root privileges. It will create a udev rules file for the Axe-FX II and copy the bootloader firmware file into "/usr/share/usb/FractalAudio/axefx2/". Non existent folders will be created automatically.
+
+Important:
+You should reboot the Axe-Fx II after running the script in order to start using the new USB firmware.
+
+Optionally, you can reboot the Axe-Fx II at a later time, or if the Axe-Fx II is not currently connected via USB.
+
+For uninstalling simply run axefx2uninstall.sh. Also the script axefx2setup.sh could be run adding the option "-u" (without the quotes) and as a second optional parameter the path to the udev rules files.
+
+The script has been written under openSUSE 11.4 but should work with other LINUX distributions as well. Depending on your system it might be necessary to adjust the path for udev rules files and reload the udev rules manually.
+
+No liability is taken for any damages that may be caused by using this script.
+
+Have a lot of fun!

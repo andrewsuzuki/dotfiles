@@ -6,10 +6,10 @@ else
 fi
 
 # Source my functions
-source ~/.dotfiles/zsh/functions.sh
+source ~/scripts/zsh/functions.sh
 
 # Source my aliases
-source ~/.dotfiles/zsh/aliases.sh
+source ~/scripts/zsh/aliases.sh
 
 # Source z, if installed
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh

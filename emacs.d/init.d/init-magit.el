@@ -1,8 +1,1 @@
-(require 'req-package)
-
-;; Magit
-(req-package magit)
-
-;; TODO configure
-
-(provide 'init-magit)
+/home/andrew/.dotfiles/emacs.d/init.d/init-magit.el

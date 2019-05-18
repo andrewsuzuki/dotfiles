@@ -5,14 +5,14 @@
 
 # Source os detection (primitive)
 # ($IS_DARWIN, $IS_LINUX)
-source ~/.dotfiles/zsh/detect-os.sh
+source ~/scripts/zsh/detect-os.sh
 
 # Source PATH
 if [[ "$IS_DARWIN" == "1" ]]
 then
-    source ~/.dotfiles/zsh/path-darwin.sh
+    source ~/scripts/zsh/path-darwin.sh
 else
-    source ~/.dotfiles/zsh/path-linux.sh
+    source ~/scripts/zsh/path-linux.sh
 fi
 
 # swiftenv (prepends to $PATH)

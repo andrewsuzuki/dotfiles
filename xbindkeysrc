@@ -1,0 +1,45 @@
+###########################
+# xbindkeys configuration #
+###########################
+
+# Power
+"termite -e $HOME/scripts/keys/power-off.sh &"
+   XF86PowerOff
+"termite -e $HOME/scripts/keys/power-off.sh &"
+   Pause
+
+# Volume
+"$HOME/scripts/keys/increase-volume-with-limit.sh"
+   XF86AudioRaiseVolume
+"$HOME/scripts/keys/decrease-volume.sh"
+   XF86AudioLowerVolume
+"$HOME/scripts/keys/mute.sh"
+   XF86AudioMute
+
+# Media
+"$HOME/scripts/keys/play-pause.sh"
+   XF86AudioPlay
+"$HOME/scripts/keys/play-pause.sh"
+   Home
+"$HOME/scripts/keys/play-pause.sh"
+   b:2
+"playerctl previous"
+   Next # PgDown
+"playerctl previous"
+   XF86AudioPrev
+"playerctl next"
+   Prior # PgUp
+"playerctl next"
+   XF86AudioNext
+
+# Backlight
+"light -s sysfs/backlight/acpi_video0 -A 10"
+   XF86MonBrightnessUp
+"light -s sysfs/backlight/acpi_video0 -U 10"
+   XF86MonBrightnessDown
+
+# Keyboard Backlight
+"light -s sysfs/leds/smc::kbd_backlight -A 10"
+   XF86KbdBrightnessUp
+"light -s sysfs/leds/smc::kbd_backlight -U 10"
+   XF86KbdBrightnessDown
