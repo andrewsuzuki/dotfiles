@@ -1,5 +1,5 @@
-! Theme
+! Xresources
 
-#include "/home/andrew/support/Xresources-themes/xcolors-apple-bright.Xresources"
+! Note that $TERM is xterm-termite (termite), which is configured in config/termite/config
 
 Xft.dpi: 220
