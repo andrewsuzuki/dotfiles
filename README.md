@@ -11,6 +11,7 @@ dependencies
 * `xbindkeys`
 * `udiskie`
 * `autorandr`
+* `qt5ct`
 * ...more
 
 todo

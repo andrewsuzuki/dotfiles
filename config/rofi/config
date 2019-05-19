@@ -1,0 +1,5 @@
+rofi.modi: drun
+
+rofi.dpi: 220
+rofi.terminal: rofi-sensible-terminal
+rofi.theme: fancy-95
