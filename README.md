@@ -12,6 +12,7 @@ dependencies
 * `udiskie`
 * `autorandr`
 * `qt5ct`
+* `rofi`
 * ...more
 
 todo

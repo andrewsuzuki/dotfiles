@@ -1,2 +1,2 @@
-EXCLUDES="README*.md LICENSE emacs.d/elpa emacs.d/auto-save-list scripts/polybar-scripts"
+EXCLUDES="README*.md LICENSE"
 UNDOTTED="scripts"
