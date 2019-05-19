@@ -39,8 +39,6 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
 # Desktop background
-# Feh (disabled)
-# sh ~/.fehbg
 # xsetroot to plain color (win95 teal)
 xsetroot -solid '#008080'
 
