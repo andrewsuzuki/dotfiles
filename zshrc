@@ -14,14 +14,8 @@ source ~/scripts/zsh/aliases.sh
 # Source z, if installed
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
-# XDG_CONFIG_HOME for whatever needs it (like Neovim)
-export XDG_CONFIG_HOME=$HOME/.config
-
 # Neovim
 export NVIM_TUI_ENABLE_TRUE_COLOR=1 # enable true 24-bit color
-
-# Go
-export GOPATH=$HOME/Program/go
 
 # export MANPATH="/usr/local/man:$MANPATH"
 

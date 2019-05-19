@@ -39,3 +39,6 @@ export PATH=$HOME/.yarn/bin:$PATH
 
 # Rustup
 export PATH=$HOME/.cargo/bin:$PATH
+
+# swiftenv (prepends to $PATH)
+if which swiftenv > /dev/null; then eval "$(swiftenv init -)"; fi
