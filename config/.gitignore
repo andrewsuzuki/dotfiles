@@ -1,8 +1,0 @@
-# Ignore everything except for selected directories
-
-/*
-/*/
-!.gitignore
-!/nvim/
-!/git/
-!/i3/
