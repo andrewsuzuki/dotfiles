@@ -57,5 +57,5 @@ scripts/keys/autorandr-conditional-load.sh
 # qt (use qt5ct config tool)
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
-# i3
+# start i3
 exec i3
