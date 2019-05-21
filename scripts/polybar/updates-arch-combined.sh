@@ -14,7 +14,7 @@ fi
 updates=$(("$updates_arch" + "$updates_aur"))
 
 if [ "$updates" -gt 0 ]; then
-    echo "upd: $updates"
+    echo "u: $updates"
 else
     echo ""
 fi

@@ -60,3 +60,18 @@ class my_edit(Command):
         # This is a generic tab-completion function that iterates through the
         # content of the current directory.
         return self._tab_directory_content()
+
+class trash(Command):
+    """
+    :trash
+    Move file to the trash using trash-cli
+    """
+    def execute(self):
+        import shutil
+        if shutil.which('trash-put') is None:
+            self.fm.notify("Couldn't find trash-put (trash-cli)")
+            return
+        from subprocess import call
+        call(['trash-put', self.fm.thisfile.path])
+        self.fm.notify("Moved " + self.fm.thisfile.path + " to trash")
+

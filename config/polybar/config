@@ -20,13 +20,14 @@ foreground-alt = #0000ff
 white = #ffffff
 primary = #00007f
 secondary = #e60053
-alert = #bd2c40
+alert = #FF5E5B
 
 [bar/pinkie]
 ;monitor = ${env:MONITOR:DP1}
 dpi = 220
 width = 100%
-height = 36
+;height = 36
+height = 40
 ; bottom = true
 ;offset-x = 1%
 ;offset-y = 1%
@@ -61,12 +62,12 @@ padding-left = 0
 padding-right = 2
 
 module-margin-left = 1
-module-margin-right = 2
+module-margin-right = 1
 
 ;font-0 = NotoSansMono:style=medium:pixelsize=8;3
-font-0 = FiraCode:style=regular:pixelsize=8;3
+font-0 = FiraCode:style=regular:pixelsize=9;4
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
-font-1 = EmojiOne:scale=12;0
+font-1 = EmojiOne:scale=11;0
 font-2 = siji:pixelsize=8;1
 
 modules-left = i3
@@ -181,6 +182,7 @@ label-visible-padding = ${self.label-focused-padding}
 ; urgent = Workspace with urgency hint set
 label-urgent = %name%
 label-urgent-background = ${module/bspwm.label-urgent-background}
+label-urgent-foreground = #000000
 label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 ; Separator in between workspaces
@@ -202,7 +204,7 @@ label-song-ellipsis = true
 [module/xbacklight]
 type = internal/xbacklight
 
-format = bl: <label>
+format = b: <label>
 label = %percentage%%
 
 bar-width = 5
@@ -225,7 +227,7 @@ enable-scroll = false
 [module/cpu]
 type = internal/cpu
 interval = 2
-format = "cpu: <label>"
+format = "c: <label>"
 ;format-prefix = "cpu:"
 ;format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #f90000
@@ -235,7 +237,7 @@ label = %percentage%%
 [module/memory]
 type = internal/memory
 interval = 2
-format = "mem: <label>"
+format = "m: <label>"
 ;format-prefix = " "
 ;format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #4bffdc
@@ -246,7 +248,7 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected = wifi: <label-connected> @ <ramp-signal>
+format-connected = w: <label-connected>
 ;format-connected-underline = #9f78e1
 label-connected = %essid%
 
@@ -303,7 +305,7 @@ type = internal/pulseaudio
 sink = alsa_output.usb-Fractal_Audio_Systems_AXE-FX_II-00.analog-stereo
 
 ;format-volume = <label-volume> <bar-volume>
-format-volume = vol: <label-volume>
+format-volume = v: <label-volume>
 label-volume = %percentage%%
 ;label-volume-foreground = ${root.foreground}
 
@@ -361,13 +363,13 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
-format-charging = bat: c-<label-charging>
+format-charging = p: c<label-charging>
 ;format-charging-underline = #ffb52a
 
-format-discharging = bat: d-<label-discharging>
+format-discharging = p: d<label-discharging>
 ;format-discharging-underline = ${self.format-charging-underline}
 
-format-full = bat: full
+format-full = p: full
 ;format-full-prefix = " "
 ;format-full-prefix-foreground = ${colors.foreground-alt}
 ;format-full-underline = ${self.format-charging-underline}
@@ -396,7 +398,7 @@ thermal-zone = 0
 ; warn temp (in celcius)
 warn-temperature = 100
 
-format = temp: <label>
+format = t: <label>
 ;format-underline = #f50a4d
 format-warn = <ramp> <label-warn>
 ;format-warn-underline = ${self.format-underline}
@@ -446,6 +448,8 @@ menu-2-1-exec = menu-open-0
 type = custom/script
 exec = ~/scripts/polybar/updates-arch-combined.sh
 interval = 600
+format-background = ${colors.alert}
+format-foreground = #000000
 format-padding = 1
 
 [settings]
