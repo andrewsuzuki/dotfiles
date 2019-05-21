@@ -26,6 +26,9 @@ borg create                         \
     --exclude '/home/*/.cache/*'    \
     --exclude '/var/cache/*'        \
     --exclude '/var/tmp/*'          \
+    --exclude '/home/andrew/.config/google-chrome/Default/Session Storage/*' \
+    --exclude '/home/andrew/.config/google-chrome/Default/Local Storage/*' \
+    --exclude '/home/andrew/.config/google-chrome/Default/Application Cache/*' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \

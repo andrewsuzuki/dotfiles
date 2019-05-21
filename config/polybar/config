@@ -7,7 +7,8 @@
 ;background = #ece9d8
 ;background = #fbfbe1
 ;background = #A799B7
-background = #dcdad5
+;background = #dcdad5
+background = #F0D3F7
 
 background-alt = #00007f
 ;foreground = ${xrdb:color7:#222}

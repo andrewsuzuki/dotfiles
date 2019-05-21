@@ -39,8 +39,10 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
 # Desktop background
-# xsetroot to plain color (win95 teal)
-xsetroot -solid '#008080'
+# xsetroot to plain color
+#xsetroot -solid '#008080' # (teal)
+#xsetroot -solid '#302f4d' # (dark purple)
+xsetroot -solid '#120d32' # (navy)
 
 # Set DPI
 xrandr --dpi 220
