@@ -23,6 +23,7 @@ export VISUAL=nvim
 export EDITOR=$VISUAL
 export PAGER=less
 export TERMINAL=termite
+export TERMCMD=termite
 export BROWSER=google-chrome-stable
 
 # XDG Config Home
