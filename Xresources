@@ -1,5 +1,3 @@
 ! Xresources
 
-! Note that $TERM is xterm-termite (termite), which is configured in config/termite/config
-
 Xft.dpi: 220
