@@ -11,7 +11,8 @@
 ;background = #F0D3F7
 background = #645f54
 
-background-alt = #00007f
+;background-alt = #00007f
+background-alt = #973BF9
 ;foreground = ${xrdb:color7:#222}
 ;foreground = #000000
 foreground = #00ffff
@@ -28,7 +29,7 @@ dpi = 220
 width = 100%
 ;height = 36
 height = 40
-; bottom = true
+bottom = true
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0
@@ -76,7 +77,7 @@ modules-right = updates-arch-combined filesystem backlight-acpi pulseaudio cpu t
 
 ; hide system tray
 tray-position = none
-tray-padding = 2
+tray-padding = 0
 ;tray-background = #0063ff
 
 ;wm-restack = bspwm
@@ -130,19 +131,19 @@ type = internal/bspwm
 label-focused = %index%
 label-focused-foreground = ${colors.white}
 label-focused-background = ${colors.background-alt}
-label-focused-underline= ${colors.primary}
-label-focused-padding = 2
+label-focused-underline= ${colors.background-alt}
+label-focused-padding = 1
 
 label-occupied = %index%
-label-occupied-padding = 2
+label-occupied-padding = 1
 
 label-urgent = %index%!
 label-urgent-background = ${colors.alert}
-label-urgent-padding = 2
+label-urgent-padding = 1
 
 label-empty = %index%
 label-empty-foreground = ${colors.foreground-alt}
-label-empty-padding = 2
+label-empty-padding = 1
 
 ; Separator in between workspaces
 ; label-separator = |
@@ -156,7 +157,7 @@ wrapping-scroll = false
 ; Only show workspaces on the same output as the bar
 ;pin-workspaces = true
 
-label-mode-padding = 2
+label-mode-padding = 1
 label-mode-foreground = #000
 ;label-mode-background = #e60053
 label-mode-background = #f142f4
@@ -420,8 +421,8 @@ expand-right = true
 format-spacing = 1
 
 ;label-open = 
-
-label-open = 👑
+;label-open = 👑
+label-open = 🚲
 ;label-open-foreground = ${colors.secondary}
 ;label-close =  cancel
 label-close = x
@@ -448,9 +449,9 @@ menu-2-1-exec = menu-open-0
 type = custom/script
 exec = ~/scripts/polybar/updates-arch-combined.sh
 interval = 600
-format-background = ${colors.alert}
-format-foreground = #000000
-format-padding = 1
+; format-background = ${colors.alert}
+; format-foreground = #000000
+; format-padding = 1
 
 [settings]
 screenchange-reload = true
@@ -461,7 +462,7 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 [global/wm]
-margin-top = 5
-margin-bottom = 5
+margin-top = 0
+margin-bottom = 0
 
 ; vim:ft=dosini

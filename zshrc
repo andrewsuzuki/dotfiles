@@ -14,26 +14,12 @@ source ~/scripts/zsh/aliases.sh
 # Source z, if installed
 [[ -r "/usr/share/z/z.sh" ]] && source /usr/share/z/z.sh
 
-# Neovim
-export NVIM_TUI_ENABLE_TRUE_COLOR=1 # enable true 24-bit color
-
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
-
 # oh-my-zsh config
 # ----------------
 
 # Name of the theme to load (~/.oh-my-zsh/themes)
 # (or use "random" for a random theme
-ZSH_THEME="dpoggi"
+ZSH_THEME="lambda"
 # Use case-insensitive auto-completion
 CASE_SENSITIVE="false"
 # Correct mistakes between _ and -
@@ -59,6 +45,36 @@ HIST_STAMPS="yyyy-mm-dd"
 # oh-my-zsh custom folder
 ZSH_CUSTOM=$ZSH/custom # (default)
 # Space-separated plugins to load (from ~/.oh-my-zsh/plugins)
-plugins=(git)
+plugins=(
+	git
+	vi-mode
+)
+# vi-mode indicator
+# MODE_INDICATOR="NORMAL"
+# MODE_INDICATOR="%{$fg_bold[red]%}<%{$fg[red]%}<<%{$reset_color%}"
 # load oh-my-zsh
 source $ZSH/oh-my-zsh.sh
+
+# User configuration
+# ------------------
+
+# oh-my-zsh vi-mode indicator
+MODE_INDICATOR="%{$fg_bold[red]%} [% NORMAL]% %{$reset_color%}"
+
+# Neovim
+export NVIM_TUI_ENABLE_TRUE_COLOR=1 # enable true 24-bit color
+
+# export MANPATH="/usr/local/man:$MANPATH"
+
+# You may need to manually set your language environment
+# export LANG=en_US.UTF-8
+
+# Compilation flags
+# export ARCHFLAGS="-arch x86_64"
+
+# ssh
+# export SSH_KEY_PATH="~/.ssh/dsa_id"
+
+# Key timeout in tenths of seconds
+# (esp. for ESC to normal mode in zsh vi mode)
+export KEYTIMEOUT=1

@@ -111,8 +111,8 @@ bindsym $mod+t split toggle
 # Start/focus Todoist
 bindsym $mod+Shift+t exec --no-startup-id "$HOME/scripts/keys/run-focus.sh todoist.com__app todoist-chrome-app [instance\=todoist.com__app] 1.5"
 
-# Start nmtui (w for wifi)
-bindsym $mod+w exec --no-startup-id $term -e nmtui
+# Start networkmanager_dmenu (in rofi)
+bindsym $mod+w exec networkmanager_dmenu
 # Rescan wifi
 bindsym $mod+Shift+w exec --no-startup-id "nmcli device wifi rescan"
 
@@ -165,10 +165,10 @@ bindsym $mod+Shift+0 move container to workspace $ws10
 # #---Resize Mode---# #
 
 mode "resize" {
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym j resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 50 px or 10 ppt
+        bindsym k resize grow height 50 px or 10 ppt
+        bindsym j resize shrink height 50 px or 10 ppt
+        bindsym l resize grow width 50 px or 10 ppt
 
         # back to normal: Enter or Escape or $mod+r
         bindsym Return mode "default"
@@ -202,8 +202,11 @@ font pango:Noto Sans Mono Regular 6
 # Border
 default_border normal 0
 
-# Gaps
-gaps inner 0
+# # Gaps
+# gaps inner 10
+# # fix weird background bug with gaps?
+# for_window [class=".*"] border pixel 0
+# hide_edge_borders both
 
 # #---Bar---# #
 
