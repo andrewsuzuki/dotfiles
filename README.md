@@ -11,7 +11,7 @@ These are my dotfiles for Arch Linux.
 * `termite` (used by i3 and some scripts)
 * `neovim` ($EDITOR)
 * `xcwd` (in scripts/misc/term-samedir.sh)
-* `xbindkeys` (used in .xinitrc)
+* `sxhkd` (used in .xinitrc; xbindkeys replacement)
 * `udiskie` (started in .xinitrc)
 * `autorandr` (triggered in udev rule, see scripts/misc/monitor-hotplug.sh)
 * `gnome-keyring` (started in .xinitrc)

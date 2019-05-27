@@ -1,0 +1,43 @@
+# Simple X Hotkey Daemon (sxhkd) Config
+
+# Reload this configuration file (by sending SIGUSR1)
+mod5 + s
+	kill -s USR1 $(pidof sxhkd)
+
+# Power Menu
+{Pause, XF86PowerOff}
+	termite -e $HOME/scripts/keys/power-off.sh
+
+# Volume
+XF86AudioRaiseVolume
+	$HOME/scripts/keys/increase-volume-with-limit.sh
+XF86AudioLowerVolume
+	$HOME/scripts/keys/decrease-volume.sh
+XF86AudioMute
+	$HOME/scripts/keys/mute.sh
+
+# Media
+{XF86AudioPlay, Home, button2}
+	$HOME/scripts/keys/play-pause.sh
+{XF86AudioPrev, Next}
+	playerctl -p spotify previous
+{XF86AudioNext, Prior}
+	playerctl -p spotify next
+
+# Backlight
+XF86MonBrightnessUp
+	notify-send "up"; light -s sysfs/backlight/acpi_video0 -A 10
+XF86MonBrightnessDown
+	light -s sysfs/backlight/acpi_video0 -U 10
+
+# Keyboard Backlight
+XF86KbdBrightnessUp
+	light -s sysfs/leds/smc::kbd_backlight -A 10
+XF86KbdBrightnessDown
+	light -s sysfs/leds/smc::kbd_backlight -U 10
+
+# Chord example
+# mod4 + o ; {t,c,f}
+# 	{termite,google-chrome-stable,firefox}
+
+# vim: noai:ts=2:sw=2

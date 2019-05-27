@@ -198,7 +198,7 @@ client.placeholder          $white #64FFDA #121212 #d2d2d2   #64FFDA
 client.background           #d2d2d2
 
 # Font for window titles / i3bar default
-font pango:Noto Sans Mono Regular 6
+font pango:Noto Sans Mono Regular 8
 
 # Border
 default_border normal 0

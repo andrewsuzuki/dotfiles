@@ -48,8 +48,8 @@ xsetroot -solid '#e7ad99' # (salmon)
 # Set DPI
 xrandr --dpi 220
 
-# xbindkeys
-xbindkeys
+# sxhkd (Simple X Hotkey Daemon)
+sxhkd -t 1 &
 
 # udiskie (drive auto-mount)
 udiskie &
