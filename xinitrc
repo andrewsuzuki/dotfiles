@@ -39,17 +39,11 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
 # Desktop background
-# h/xsetroot to plain color
-if [ -x $(command -v hsetroot) ]; then
-	# use hsetroot (compatible with compton)
-	SETROOTCMD=hsetroot
-else
-	SETROOTCMD=xsetroot
-fi
-#$SETROOTCMD -solid '#008080' # (teal)
-#$SETROOTCMD -solid '#302f4d' # (dark purple)
-#$SETROOTCMD -solid '#120d32' # (navy)
-$SETROOTCMD -solid '#e7ad99' # (salmon)
+# xsetroot to plain color
+#xsetroot -solid '#008080' # (teal)
+#xsetroot -solid '#302f4d' # (dark purple)
+#xsetroot -solid '#120d32' # (navy)
+xsetroot -solid '#e7ad99' # (salmon)
 
 # Set DPI
 xrandr --dpi 220
@@ -62,9 +56,6 @@ udiskie &
 
 # autorandr (xrandr)
 scripts/keys/autorandr-conditional-load.sh
-
-# compton (config in .config/compton/compton.conf)
-compton -b
 
 # qt (use qt5ct config tool)
 export QT_QPA_PLATFORMTHEME="qt5ct"
