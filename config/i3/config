@@ -2,8 +2,9 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# Modifier key
+# Modifier keys
 set $mod Mod4
+set $hyper Mod5
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
