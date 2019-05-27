@@ -23,13 +23,13 @@
    Home
 "$HOME/scripts/keys/play-pause.sh"
    b:2
-"playerctl previous"
+"playerctl -p spotify previous"
    Next # PgDown
-"playerctl previous"
+"playerctl -p spotify previous"
    XF86AudioPrev
-"playerctl next"
+"playerctl -p spotify next"
    Prior # PgUp
-"playerctl next"
+"playerctl -p spotify next"
    XF86AudioNext
 
 # Backlight

@@ -57,6 +57,9 @@ udiskie &
 # autorandr (xrandr)
 scripts/keys/autorandr-conditional-load.sh
 
+# compton (config in .config/compton/compton.conf)
+compton -b
+
 # qt (use qt5ct config tool)
 export QT_QPA_PLATFORMTHEME="qt5ct"
 

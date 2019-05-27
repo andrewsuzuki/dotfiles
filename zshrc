@@ -19,7 +19,7 @@ source ~/scripts/zsh/aliases.sh
 
 # Name of the theme to load (~/.oh-my-zsh/themes)
 # (or use "random" for a random theme
-ZSH_THEME="lambda"
+ZSH_THEME="lambda-gitster"
 # Use case-insensitive auto-completion
 CASE_SENSITIVE="false"
 # Correct mistakes between _ and -

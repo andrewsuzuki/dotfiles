@@ -14,4 +14,4 @@ if playerctl -l 2>&1 >/dev/null | grep -q "No players" > /dev/null; then
 fi
 
 # Play or pause
-playerctl play-pause &> /dev/null
+playerctl -a play-pause &> /dev/null
