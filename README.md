@@ -16,6 +16,8 @@ These are my dotfiles for Arch Linux.
 * `autorandr` (triggered in udev rule, see scripts/misc/monitor-hotplug.sh)
 * `gnome-keyring` (started in .xinitrc)
 * `qt5ct` (set up as QT_QPA_PLATFORMTHEME in .xinitrc)
+* `compton` (started in .xinitrc)
+* `hsetroot` (started in .xinitrc, a compton-compatible xsetroot)
 * `rofi` (launched by i3 on hotkey)
 * `polybar` (launched by i3)
 * `z` (installed in /usr/share/z/z.sh, loaded in .zshrc)
