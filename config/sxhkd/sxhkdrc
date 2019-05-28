@@ -1,7 +1,7 @@
 # Simple X Hotkey Daemon (sxhkd) Config
 
 # Reload this configuration file (by sending SIGUSR1)
-mod5 + s
+mod5+s
 	kill -s USR1 $(pidof sxhkd); notify-send -u low "sxhkd config reloaded"
 
 # Power Menu
@@ -26,7 +26,7 @@ XF86AudioMute
 
 # Backlight
 XF86MonBrightnessUp
-	notify-send "up"; light -s sysfs/backlight/acpi_video0 -A 10
+	light -s sysfs/backlight/acpi_video0 -A 10
 XF86MonBrightnessDown
 	light -s sysfs/backlight/acpi_video0 -U 10
 
@@ -39,49 +39,49 @@ XF86KbdBrightnessDown
 # Applications
 # ------------
 
-# Rofi
-mod4 + d
-	rofi -show drun
-
-# networkmanager_dmenu (in rofi)
-mod5 + w
-	networkmanager_dmenu
-# rescan wifi
-mod5 + shift + w
-	nmcli device wifi rescan
+# Termite
+# (Normally started with mod4 + Return via i3)
+mod3+Return
+	smartrf termite termite --trap
 
 # Chrome
-{mod4 + shift + b, mod4 + shift + p, mod3 + b}
+{mod4+shift+b, mod4+shift+p, mod3+b}
 	{google-chrome-stable, google-chrome-stable --incognito, smartrf google-chrome google-chrome}
 
 # VS Code
-{mod4 + shift + c, mod3 + c}
+{mod4+shift+c, mod3+c}
 	{code, smartrf code-oss code-oss}
 
-# Todoist
-mod3 + i
-	smartrf todoist-chrome-app todoist.com__app --sleep 1
+# Rofi
+mod4+d
+	rofi -show drun
 
 # Gmail
-mod3 + m
+mod3+m
 	smartrf chrome-kmhopmchchfpfdcdjodmpfaaphdclmlj-Default crx_kmhopmchchfpfdcdjodmpfaaphdclmlj --sleep 1
 
-# Spotify
-mod3 + s
-	smartrf spotify spotify --sleep 1
-
 # Nixnote
-mod3 + n
+mod3+n
 	smartrf nixnote2 nixnote2
 
-# Termite
-# (Normally started with mod4 + Return via i3)
-mod3 + t
-	smartrf termite termite --trap
+# Spotify
+mod3+s
+	smartrf spotify spotify --sleep 1
+
+# Todoist
+mod3+t
+	smartrf todoist-chrome-app todoist.com__app --sleep 1
 
 # Vim
-mod3 + v
+mod3+v
 	smartrf termite "^[n]vim" --by name
+
+# networkmanager_dmenu (in rofi)
+mod5+w
+	networkmanager_dmenu
+# rescan wifi
+mod5+shift+w
+	nmcli device wifi rescan
 
 # Chord example
 # mod4 + o ; {t,c,f}

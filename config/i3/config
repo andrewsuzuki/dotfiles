@@ -126,9 +126,9 @@ set $ws4 "4"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
-set $ws8 "8: email"
+set $ws8 "8: mail"
 set $ws9 "9: todos"
-set $ws10 "10: music"
+set $ws10 "10: spotify"
 
 # Workspace assignments
 # https://i3wm.org/docs/userguide.html#assign_workspace
