@@ -9,6 +9,9 @@ PATH=$HOME/.yarn/bin:$PATH
 # Go binaries
 PATH=$HOME/Program/go/bin:$PATH
 
+# My scripts (mostly linked elsewhere)
+PATH=$HOME/scripts/bin:$PATH
+
 # ------
 # Export
 # ------
