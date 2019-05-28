@@ -34,13 +34,13 @@ bindsym $mod+Shift+a exec --no-startup-id "$HOME/scripts/keys/autorandr-conditio
 # bindsym $mod+b exec google-chrome-stable
 
 # Start/focus VSCode
-bindsym $mod+Shift+c exec --no-startup-id "$HOME/scripts/keys/run-focus.sh code-oss code-oss [class\=code-oss] 2"
+# bindsym $mod+Shift+c exec --no-startup-id "$HOME/scripts/keys/run-focus.sh code-oss code-oss [class\=code-oss] 2"
 
 # Start Rofi
-bindsym $mod+d exec --no-startup-id "rofi -show drun"
+# bindsym $mod+d exec --no-startup-id "rofi -show drun"
 # Start file manager (Dolphin for now)
 #bindsym $mod+Shift+d exec --no-startup-id "$term -e ranger"
-bindsym $mod+Shift+d exec pcmanfm
+#bindsym $mod+Shift+d exec pcmanfm
 
 # Toggle container split layout
 bindsym $mod+e layout toggle split
@@ -50,7 +50,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 # Enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 # fzf (fuzzy finder) via `fo` sh function
-bindsym $mod+Shift+f exec --no-startup-id "$term -e 'zsh -ic fo'"
+# bindsym $mod+Shift+f exec --no-startup-id "$term -e 'zsh -ic fo'"
 
 # Previous workspace
 bindsym $mod+g workspace prev
@@ -83,15 +83,15 @@ bindsym $mod+l focus right
 bindsym $mod+Shift+l move right
 
 # Start/focus Gmail
-bindsym $mod+Shift+m exec --no-startup-id "$HOME/scripts/keys/run-focus.sh crx_kmhopmchchfpfdcdjodmpfaaphdclmlj chrome-kmhopmchchfpfdcdjodmpfaaphdclmlj-Default [instance\=crx_kmhopmchchfpfdcdjodmpfaaphdclmlj] 1"
+# bindsym $mod+Shift+m exec --no-startup-id "$HOME/scripts/keys/run-focus.sh crx_kmhopmchchfpfdcdjodmpfaaphdclmlj chrome-kmhopmchchfpfdcdjodmpfaaphdclmlj-Default [instance\=crx_kmhopmchchfpfdcdjodmpfaaphdclmlj] 1"
 
 # Start/focus NixNote2
-bindsym $mod+Shift+n exec "$HOME/scripts/keys/run-focus.sh nixnote2 nixnote2 [class\=nixnote2] 1"
+#bindsym $mod+Shift+n exec "$HOME/scripts/keys/run-focus.sh nixnote2 nixnote2 [class\=nixnote2] 1"
 
 # Toggle Polybar visibility
 bindsym $mod+p exec --no-startup-id polybar-msg cmd toggle
 # Start private browser (Chrome Incognito)
-bindsym $mod+Shift+p exec google-chrome-stable --incognito
+# bindsym $mod+Shift+p exec google-chrome-stable --incognito
 
 # Kill focused window
 bindsym $mod+q kill
@@ -101,20 +101,20 @@ bindsym $mod+r mode "resize"
 # Restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# TESTING switch to tabbed layout
+# Switch to tabbed layout
 bindsym $mod+s layout tabbed
 # Start/focus Spotify
-bindsym $mod+Shift+s exec --no-startup-id "$HOME/scripts/keys/run-focus.sh spotify spotify [class\=Spotify] 1"
+# bindsym $mod+Shift+s exec --no-startup-id "$HOME/scripts/keys/run-focus.sh spotify spotify [class\=Spotify] 1"
 
 # Toggle split direction
 bindsym $mod+t split toggle
 # Start/focus Todoist
-bindsym $mod+Shift+t exec --no-startup-id "$HOME/scripts/keys/run-focus.sh todoist.com__app todoist-chrome-app [instance\=todoist.com__app] 1.5"
+# bindsym $mod+Shift+t exec --no-startup-id "$HOME/scripts/keys/run-focus.sh todoist.com__app todoist-chrome-app [instance\=todoist.com__app] 1.5"
 
 # Start networkmanager_dmenu (in rofi)
-bindsym $mod+w exec networkmanager_dmenu
+# bindsym $mod+w exec networkmanager_dmenu
 # Rescan wifi
-bindsym $mod+Shift+w exec --no-startup-id "nmcli device wifi rescan"
+# bindsym $mod+Shift+w exec --no-startup-id "nmcli device wifi rescan"
 
 # #---Workspaces---# #
 

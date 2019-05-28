@@ -39,18 +39,24 @@ XF86KbdBrightnessDown
 # Applications
 # ------------
 
-# maps
-# b chrome
-# c vs code
-# d rofi
+# Rofi
+mod4 + d
+	rofi -show drun
+
+# networkmanager_dmenu (in rofi)
+mod5 + w
+	networkmanager_dmenu
+# rescan wifi
+mod5 + shift + w
+	nmcli device wifi rescan
 
 # Chrome
-{mod4 + b, mod3 + b}
-	{google-chrome-stable, $HOME/scripts/keys/smartrf.py google-chrome google-chrome}
+{mod4 + shift + b, mod4 + shift + p, mod3 + b}
+	{google-chrome-stable, google-chrome-stable --incognito, $HOME/scripts/keys/smartrf.py google-chrome google-chrome}
 
 # VS Code
-mod3 + c
-	$HOME/scripts/keys/smartrf.py code-oss code-oss
+{mod4 + shift + c, mod3 + c}
+	{code, $HOME/scripts/keys/smartrf.py code-oss code-oss}
 
 # Todoist
 mod3 + i
@@ -64,7 +70,12 @@ mod3 + m
 mod3 + s
 	$HOME/scripts/keys/smartrf.py spotify spotify --sleep 1
 
+# Nixnote
+mod3 + n
+	$HOME/scripts/keys/smartrf.py nixnote2 nixnote2
+
 # Termite
+# (Normally started with mod4 + Return via i3)
 mod3 + t
 	$HOME/scripts/keys/smartrf.py termite termite --trap
 
