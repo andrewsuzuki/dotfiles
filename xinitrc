@@ -38,21 +38,6 @@ dbus-update-activation-environment --systemd DISPLAY
 eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
-# Desktop background
-# xsetroot to plain color
-#xsetroot -solid '#008080' # (teal)
-#xsetroot -solid '#302f4d' # (dark purple)
-#xsetroot -solid '#120d32' # (navy)
-xsetroot -solid '#e7ad99' # (salmon)
-# Image, if it is exists in ~/.wallpaper
-dotwallpaper=$HOME/.wallpaper
-if [ -f $dotwallpaper ]; then
-	wallpaperimage=$(cat $dotwallpaper)
-	wallpaperimage="${wallpaperimage//\~/$HOME}"
-	# background image
-	[ -f "$wallpaperimage" ] && feh --bg-fill $wallpaperimage
-fi
-
 # Set DPI
 xrandr --dpi 220
 
@@ -64,6 +49,9 @@ udiskie &
 
 # autorandr (xrandr)
 scripts/keys/autorandr-conditional-load.sh
+
+# Desktop background
+scripts/misc/desktop-background.sh
 
 # qt (use qt5ct config tool)
 export QT_QPA_PLATFORMTHEME="qt5ct"

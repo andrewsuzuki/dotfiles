@@ -35,6 +35,9 @@ POST_AUTORANDR_PROFILE=$( autorandr --current )
 
 # If autorandr profile actually changed...
 if [ "$PRE_AUTORANDR_PROFILE" != "$POST_AUTORANDR_PROFILE" ]; then
-	# Restart i3 (really just for the polybar redraw...)
-	i3-msg restart
+	# Restart i3 (really just for the polybar redraw...) if it's running
+	pgrep -x i3 >/dev/null && i3-msg restart
 fi
+
+# Reset background
+~/scripts/misc/desktop-background.sh
