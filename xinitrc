@@ -44,6 +44,14 @@ export SSH_AUTH_SOCK
 #xsetroot -solid '#302f4d' # (dark purple)
 #xsetroot -solid '#120d32' # (navy)
 xsetroot -solid '#e7ad99' # (salmon)
+# Image, if it is exists in ~/.wallpaper
+dotwallpaper=$HOME/.wallpaper
+if [ -f $dotwallpaper ]; then
+	wallpaperimage=$(cat $dotwallpaper)
+	wallpaperimage="${wallpaperimage//\~/$HOME}"
+	# background image
+	[ -f "$wallpaperimage" ] && feh --bg-fill $wallpaperimage
+fi
 
 # Set DPI
 xrandr --dpi 220

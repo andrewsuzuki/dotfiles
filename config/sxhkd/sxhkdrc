@@ -2,7 +2,7 @@
 
 # Reload this configuration file (by sending SIGUSR1)
 mod5 + s
-	kill -s USR1 $(pidof sxhkd)
+	kill -s USR1 $(pidof sxhkd); notify-send -u low "sxhkd config reloaded"
 
 # Power Menu
 {Pause, XF86PowerOff}
@@ -36,8 +36,44 @@ XF86KbdBrightnessUp
 XF86KbdBrightnessDown
 	light -s sysfs/leds/smc::kbd_backlight -U 10
 
+# Applications
+# ------------
+
+# maps
+# b chrome
+# c vs code
+# d rofi
+
+# Chrome
+{mod4 + b, mod3 + b}
+	{google-chrome-stable, $HOME/scripts/keys/smartrf.py google-chrome google-chrome}
+
+# VS Code
+mod3 + c
+	$HOME/scripts/keys/smartrf.py code-oss code-oss
+
+# Todoist
+mod3 + i
+	$HOME/scripts/keys/smartrf.py todoist-chrome-app todoist.com__app --sleep 1
+
+# Gmail
+mod3 + m
+	$HOME/scripts/keys/smartrf.py chrome-kmhopmchchfpfdcdjodmpfaaphdclmlj-Default crx_kmhopmchchfpfdcdjodmpfaaphdclmlj --sleep 1
+
+# Spotify
+mod3 + s
+	$HOME/scripts/keys/smartrf.py spotify spotify --sleep 1
+
+# Termite
+mod3 + t
+	$HOME/scripts/keys/smartrf.py termite termite --trap
+
+# Vim
+mod3 + v
+	$HOME/scripts/keys/smartrf.py termite "^[n]vim" --by name
+
 # Chord example
 # mod4 + o ; {t,c,f}
 # 	{termite,google-chrome-stable,firefox}
 
-# vim: noai:ts=2:sw=2
+# vim: ts=2:sw=2

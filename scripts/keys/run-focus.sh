@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # If not running, open. Then focus using i3-msg.
-# Usage: run-focus.sh X_CLASSNAME I3_SELECTOR SLEEP
+# Usage: run-focus.sh X_CLASSNAME COMMAND I3_SELECTOR SLEEP
 
 if ! xdotool search --classname $1 > /dev/null
 then

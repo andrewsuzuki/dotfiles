@@ -4,7 +4,6 @@
 
 # Modifier keys
 set $mod Mod4
-set $hyper Mod5
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -17,9 +16,9 @@ set $term termite
 
 # #---Primary Bindings---# #
 
-# Start URxvt
-bindsym $mod+Return exec --no-startup-id $term
-# Start URxvt in same directory as current
+# Start Termite
+bindsym $mod+Return exec $term
+# Start Termite in same directory as current
 #bindsym $mod+Shift+Return exec --no-startup-id "$HOME/scripts/misc/term-samedir.sh"
 bindsym $mod+Shift+Return exec $term -d "$(xcwd)"
 
@@ -31,8 +30,8 @@ bindsym $mod+Shift+space floating toggle
 # Autorandr autodetect / load profile
 bindsym $mod+Shift+a exec --no-startup-id "$HOME/scripts/keys/autorandr-conditional-load.sh"
 
-# Start Chrome Browser (see also: incognito mod+Shift+i)
-bindsym $mod+b exec google-chrome-stable
+# # Start Chrome Browser (see also: incognito mod+Shift+p)
+# bindsym $mod+b exec google-chrome-stable
 
 # Start/focus VSCode
 bindsym $mod+Shift+c exec --no-startup-id "$HOME/scripts/keys/run-focus.sh code-oss code-oss [class\=code-oss] 2"
