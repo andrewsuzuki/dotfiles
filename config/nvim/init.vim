@@ -34,6 +34,9 @@ Plug 'junegunn/fzf.vim'
 " colorschemes
 Plug 'rafi/awesome-vim-colorschemes'
 
+" vim
+Plug 'HendrikPetertje/vimify'
+
 call plug#end()
 
 set background=light
