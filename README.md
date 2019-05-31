@@ -25,6 +25,7 @@ These are my dotfiles for Arch Linux.
 * `dunst` (auto-started)
 * `xdotool` (used in scripts/keys/run-focus.sh)
 * `pulseaudio`, `pactl`, `playerctl`, `pamixer` (for various media scripts/bound keys)
+* `vimiv` (image viewer)
 
 ## Installation
 

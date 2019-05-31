@@ -742,8 +742,7 @@ xkb_compatibility "complete" {
         action= SetMods(modifiers=modMapMods,clearLocks);
     };
     interpret Super_R+AnyOf(all) {
-	// ANDREWMOD
-        virtualModifier= Hyper;
+        virtualModifier= Super;
         action= SetMods(modifiers=modMapMods,clearLocks);
     };
     interpret Hyper_L+AnyOf(all) {
@@ -1056,8 +1055,7 @@ xkb_compatibility "complete" {
         action= SetMods(modifiers=Super,clearLocks);
     };
     interpret Super_R+AnyOfOrNone(all) {
-	// ANDREWMOD
-        action= SetMods(modifiers=Hyper,clearLocks);
+        action= SetMods(modifiers=Super,clearLocks);
     };
     interpret Hyper_L+AnyOfOrNone(all) {
         action= SetMods(modifiers=Hyper,clearLocks);
@@ -1560,7 +1558,12 @@ xkb_symbols "pc+us+inet(evdev)+capslock(escape)" {
     modifier_map Control { <RCTL> };
     modifier_map Mod1 { <RALT> };
     modifier_map Mod4 { <LWIN> };
+
+    // ANDREWMOD
+    // modifier_map Mod4 { <RWIN> };
     modifier_map Mod3 { <RWIN> };
+
+    modifier_map Mod3 { <HYPR> };
     modifier_map Mod5 { <MDSW> };
     modifier_map Mod1 { <META> };
     modifier_map Mod4 { <SUPR> };
