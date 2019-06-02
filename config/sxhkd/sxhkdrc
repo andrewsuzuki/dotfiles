@@ -56,6 +56,10 @@ mod3+Return
 mod4+d
 	rofi -show drun
 
+# Google Calendar
+mod3+g
+	smartrf chrome-kjbdgfilnfhdoflbpgamdcdgpehopbep-Default crx_kjbdgfilnfhdoflbpgamdcdgpehopbep --sleep 1
+
 # Gmail
 mod3+m
 	smartrf chrome-kmhopmchchfpfdcdjodmpfaaphdclmlj-Default crx_kmhopmchchfpfdcdjodmpfaaphdclmlj --sleep 1

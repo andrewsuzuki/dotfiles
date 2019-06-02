@@ -37,3 +37,6 @@ alias serveon="python3 -m http.server"
 
 # npm execute local bin
 alias npm-exec='PATH=$(npm bin):$PATH'
+
+# weather (go get https://github.com/genuinetools/weather)
+alias wth="weather -d 7 | less"

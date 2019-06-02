@@ -367,10 +367,12 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
-format-charging = p: 👆<label-charging>
+format-charging = p: <label-charging>↑
+label-charging = %percentage%
 ;format-charging-underline = #ffb52a
 
-format-discharging = p: 👇<label-discharging>
+format-discharging = p: <label-discharging>↓
+label-discharging = %percentage%
 ;format-discharging-underline = ${self.format-charging-underline}
 
 format-full = p: full
