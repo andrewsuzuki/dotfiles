@@ -1,2 +1,2 @@
-EXCLUDES="README*.md LICENSE gitattributes"
+EXCLUDES="README*.md LICENSE gitattributes system"
 UNDOTTED="scripts"
