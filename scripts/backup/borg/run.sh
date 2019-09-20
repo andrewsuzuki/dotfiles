@@ -26,12 +26,22 @@ borg create                         \
     --exclude '/home/*/.cache/*'    \
     --exclude '/var/cache/*'        \
     --exclude '/var/tmp/*'          \
-    --exclude '/home/andrew/.config/google-chrome/Default/Session Storage/*' \
-    --exclude '/home/andrew/.config/google-chrome/Default/Local Storage/*' \
-    --exclude '/home/andrew/.config/google-chrome/Default/Application Cache/*' \
+    --exclude '/var/lib/pacman/*' \
+    --exclude '/home/andrew/.config/google-chrome/*' \
+    --exclude '/home/andrew/.config/Code - OSS/*' \
+    --exclude '/home/andrew/.vscode-oss/*' \
+    --exclude '/home/andrew/.mozilla/firefox/*' \
+    --exclude '/home/andrew/.cargo/*' \
     --exclude '/home/andrew/.npm/*' \
+    --exclude '/home/andrew/.node-gyp/*' \
+    --exclude '/home/andrew/.m2/*' \
+    --exclude '/home/andrew/Program/go/*' \
+    --exclude '/home/andrew/.oh-my-zsh/*' \
     --exclude '/home/andrew/Torrent/*' \
     --exclude '/home/andrew/.local/share/Trash/*' \
+    --exclude '/home/andrew/.local/share/xorg/*' \
+    --exclude '/home/andrew/.z' \
+    --exclude '/home/andrew/.zsh_history' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \

@@ -39,7 +39,7 @@ eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 export SSH_AUTH_SOCK
 
 # Set DPI
-xrandr --dpi 220
+# xrandr --dpi 220
 
 # sxhkd (Simple X Hotkey Daemon)
 sxhkd -t 1 &

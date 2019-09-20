@@ -6,3 +6,7 @@
 sleep 2
 
 su andrew -c "/bin/zsh /home/andrew/scripts/keys/autorandr-conditional-load.sh"
+
+sleep 1
+# also reload xkb
+source /home/andrew/scripts/misc/reload-xkb-config.sh

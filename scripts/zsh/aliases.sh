@@ -12,8 +12,11 @@ alias vim="nvim"
 alias g="git"
 alias p="python3"
 alias h="history"
+alias hr="history | rg --smart-case"
 alias pa="php artisan"
 alias ns="npm start"
+alias d="docker"
+alias dc="docker-compose"
 
 # network manager
 alias nr="nmcli device wifi rescan"
@@ -29,6 +32,7 @@ alias e_sx="vim ~/.config/sxhkd/sxhkdrc"
 
 # scripts
 alias backup="~/scripts/backup/borg/run.sh"
+alias rx="~/scripts/misc/reload-xkb-config.sh"
 
 # start simple python web server in cwd on port 7777
 alias serve="python3 -m http.server 7777"

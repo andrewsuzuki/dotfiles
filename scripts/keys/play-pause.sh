@@ -2,10 +2,10 @@
 
 # Play/pause
 
-# If a player is open, run `playerctl play-pause`.
-# If not, open Spotify first.
+# If spotify is not open, open it.
+# Then tell spotify to play or pause.
 
-if playerctl -l 2>&1 >/dev/null | grep -q "No players" > /dev/null; then
+if ! playerctl -l 2>/dev/null | grep -q "spotify"; then
 	# Open spotify
 	nohup spotify > /dev/null 2>&1&
 
@@ -14,4 +14,4 @@ if playerctl -l 2>&1 >/dev/null | grep -q "No players" > /dev/null; then
 fi
 
 # Play or pause
-playerctl -a play-pause &> /dev/null
+playerctl -p spotify play-pause &> /dev/null

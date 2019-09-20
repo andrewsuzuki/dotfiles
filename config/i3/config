@@ -132,10 +132,14 @@ set $ws10 "10: spotify"
 
 # Workspace assignments
 # https://i3wm.org/docs/userguide.html#assign_workspace
-#assign [class="chrome"] $ws1
-#assign [class="code-oss"] $ws3
+
+# gmail
 for_window [instance="crx_kmhopmchchfpfdcdjodmpfaaphdclmlj"] move to workspace $ws8
+# google calendar
+for_window [instance="crx_kjbdgfilnfhdoflbpgamdcdgpehopbep"] move to workspace $ws8
+# todoist
 for_window [instance="todoist.com__app"] move to workspace $ws9
+# spotify
 for_window [class="Spotify"] move to workspace $ws10
 
 # Switch to workspace

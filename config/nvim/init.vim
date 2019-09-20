@@ -26,6 +26,8 @@ Plug 'rust-lang/rust.vim'
 Plug 'kovetskiy/sxhkd-vim'
 Plug 'editorconfig/editorconfig-vim'
 Plug 'easymotion/vim-easymotion'
+Plug 'justinmk/vim-sneak'
+Plug 'bhurlow/vim-parinfer'
 
 " fzf
 Plug '/usr/local/opt/fzf'
