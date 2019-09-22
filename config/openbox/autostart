@@ -1,7 +1,5 @@
 #
 # These things are run when an Openbox X Session is started.
-# You may place a similar script in $HOME/.config/openbox/autostart
-# to run user-specific things.
 #
 
 # If you want to use GNOME config tools...
@@ -15,3 +13,7 @@
 # If you want to use XFCE config tools...
 #
 #xfce-mcs-manager &
+
+# Launch polybar
+
+$HOME/scripts/polybar/launch.sh

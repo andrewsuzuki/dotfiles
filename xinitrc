@@ -57,4 +57,5 @@ scripts/misc/desktop-background.sh
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
 # start i3
-exec i3
+#exec i3
+exec openbox-session
