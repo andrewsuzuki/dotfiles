@@ -11,6 +11,8 @@ floating_modifier $mod
 # Focus should not follow mouse
 focus_follows_mouse no
 
+workspace_layout tabbed
+
 # #---Primary Bindings---# #
 
 # Change focus between tiling / floating windows
@@ -128,6 +130,11 @@ bindsym $mod+Shift+8 move container to workspace $ws8
 bindsym $mod+Shift+9 move container to workspace $ws9
 bindsym $mod+Shift+0 move container to workspace $ws10
 
+# #---Misc---# #
+
+# cmst floats by default; disable it
+for_window [class="CMST"] floating disable
+
 # #---Resize Mode---# #
 
 mode "resize" {
@@ -148,14 +155,16 @@ mode "resize" {
 set $white #ffffff
 set $black #000000
 #set $teal #008080
-set $teal #EA85CF
+set $pink #EA85CF
+#set $actualblue #0000FF
 set $gray #c0c0c0
 set $blue #00007f
 set $red #f0696f
+set $cyan #00FFFF
 
 # Frame window colors
 # Class                     border backgr   text   indicator child_border
-client.focused		    $teal  $teal   $white  #56606f   #56606f
+client.focused		    $pink  $pink   $white  #56606f   #56606f
 client.focused_inactive     $white #384254 $black  #d2d2d2   #384254
 client.unfocused            $gray  $gray   $black  #d2d2d2   #5A5C5F
 client.urgent   	    $red   $red    #121212 #d2d2d2   #984141
@@ -163,7 +172,8 @@ client.placeholder          $white #64FFDA #121212 #d2d2d2   #64FFDA
 client.background           #d2d2d2
 
 # Font for window titles / i3bar default
-font pango:Noto Sans Mono Regular 8
+#font pango:Noto Sans Mono Regular 8
+font pango:ComicSansMS Regular 8
 
 # Border
 default_border normal 0
@@ -181,18 +191,18 @@ exec_always --no-startup-id $HOME/scripts/polybar/launch.sh
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
-#bar {
-#        status_command i3status
-#
-# 	# Bar colors
-# 	colors {
-# 		background #ffffff
-# 		statusline #2d2d2d
-# 		separator  #f44336
-# 		#   Indicator panel
-# 		#                        border  backgr   text
-# 		focused_workspace   #00bcd4 #00bcd4 #2d2d2d
-# 		inactive_workspace  #404a59 #404a59 #E6E5CA
-# 		urgent_workspace    #f44336 #f44336 #E6E5CA
-# 	}
-#}
+# bar {
+#         status_command i3status
+
+#  	# Bar colors
+#  	colors {
+#  		# background #ffffff
+#  		statusline #2d2d2d
+#  		separator  #f44336
+#  		#   Indicator panel
+#  		#                   border  backgr   text
+#  		focused_workspace   #00bcd4 #00bcd4 #2d2d2d
+#  		inactive_workspace  #404a59 #404a59 #E6E5CA
+#  		urgent_workspace    #f44336 #f44336 #E6E5CA
+#  	}
+# }

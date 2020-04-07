@@ -4,6 +4,9 @@
 [colors]
 ;background = ${xrdb:color0:#222}
 ;background = #c0c0c0
+;background = #dddddd
+;background = #DEB887
+;background = #E0C1B3
 ;background = #ece9d8
 ;background = #fbfbe1
 ;background = #A799B7
@@ -11,18 +14,25 @@
 ;background = #F0D3F7
 ;background = #645f54
 ;background = #000000
-background = #C9D5B5
+;background = #C9D5B5
+background = #c9ab93
+;background = #0000FF
 
 ;background-alt = #00007f
-background-alt = #973BF9
+background-alt = #00FFFF
+;background-alt = #973BF9
+;background-alt = #c9ab93
 ;foreground = ${xrdb:color7:#222}
-;foreground = #000000
+foreground = #000000
 ;foreground = #00ffff
-foreground = #59FFA0
+;foreground = #0000ff
+;foreground = #59FFA0
 ;foreground = #1f2d3d
 ;ummm foreground-alt?
 foreground-alt = #0000ff
 white = #ffffff
+black = #000000
+blue = #0000ff
 primary = #00007f
 secondary = #e60053
 alert = #FF5E5B
@@ -43,17 +53,29 @@ enable-ipc = true
 
 ;background = ${colors.background}
 
-; gradient from cyan to rust
+; gradient from cyan to sand
 background-0 = #00a8e5
-background-1 = #1aa4d5
-background-2 = #34a0c6
-background-3 = #4f9cb7
-background-4 = #6998a8
-background-5 = #849499
-background-6 = #9e908a
-background-7 = #b98c7b
-background-8 = #d3886c
-background-9 = #ee845d
+background-1 = #15A9D9
+background-2 = #2BAACE
+background-3 = #40ABC3
+background-4 = #56ACB8
+background-5 = #6BADAC
+background-6 = #81AEA1
+background-7 = #96AF96
+background-8 = #ACB08B
+background-9 = #C2B280
+
+; ; gradient from cyan to rust
+; background-0 = #00a8e5
+; background-1 = #1aa4d5
+; background-2 = #34a0c6
+; background-3 = #4f9cb7
+; background-4 = #6998a8
+; background-5 = #849499
+; background-6 = #9e908a
+; background-7 = #b98c7b
+; background-8 = #d3886c
+; background-9 = #ee845d
 
 foreground = ${colors.foreground}
 
@@ -66,15 +88,19 @@ border-color = #00000000
 padding-left = 0
 padding-right = 2
 
-;separator = "·"
-separator = " – "
+separator = "·"
+;separator = " – "
 
-module-margin-left = 1
-module-margin-right = 1
+; module-margin-left = 1
+; module-margin-right = 1
+module-margin-left = 0
+module-margin-right = 0
 
-;font-0 = NotoSansMono:style=medium:pixelsize=8;3
-;font-0 = FiraCode:style=regular:pixelsize=10;6
-font-0 = ComicSansMS:style=regular:pixelsize=10;4
+;font-0 = NotoSansMono:style=medium:pixelsize=9;3
+;font-0 = FiraCode:style=medium:pixelsize=9;3
+;font-0 = ComicSansMS:style=bold:pixelsize=10;4
+font-0 = ComicSansMS:style=regular:pixelsize=10;3
+;font-0 = Times:style=bold:pixelsize=9;4
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-1 = JoyPixels:scale=10;6
 font-2 = siji:pixelsize=8;1
@@ -85,6 +111,7 @@ modules-right = updates-arch-combined filesystem backlight-acpi pulseaudio cpu t
 
 ; hide system tray
 tray-position = none
+; tray-position = right
 tray-padding = 0
 ;tray-background = #0063ff
 
@@ -137,7 +164,7 @@ label-unmounted-foreground = ${colors.foreground-alt}
 type = internal/bspwm
 
 label-focused = %index%
-label-focused-foreground = ${colors.white}
+label-focused-foreground = ${colors.blue}
 label-focused-background = ${colors.background-alt}
 label-focused-underline= ${colors.background-alt}
 label-focused-padding = 1
@@ -303,6 +330,7 @@ format = <label>
 ;format-prefix = 
 ;format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #0a6cf5
+format-foreground = #0000FF
 
 label = %date% %time%
 
@@ -372,18 +400,20 @@ battery = BAT0
 adapter = ADP1
 full-at = 98
 
-format-charging = p: <label-charging>↑
+;format-charging = p: <label-charging>↑
+format-charging = p: <label-charging>c
 label-charging = %percentage%
 ;format-charging-underline = #ffb52a
 
-format-discharging = p: <label-discharging>↓
+format-discharging = p: <label-discharging>d
 label-discharging = %percentage%
 ;format-discharging-underline = ${self.format-charging-underline}
 
 format-full = p: full
 ;format-full-prefix = " "
-format-full-prefix-foreground = #3BC14A
+;format-full-prefix-foreground = #3BC14A
 ;format-full-underline = ${self.format-charging-underline}
+format-full-foreground = #3BC14A
 
 ramp-capacity-0 = 
 ramp-capacity-1 = 

@@ -23,10 +23,14 @@ hex {
 PRE_AUTORANDR_PROFILE=$( autorandr --current )
 
 # If home Asus monitor is connected, load home profile.
-# Otherwise, just use the mb screen
+# If HP 22cwa monitor is connected, load kitchen-hp profile.
+# Otherwise, just use mb-only profile (no monitor, just macbook display)
 if echo $MONITORNAMES | grep -qi "ASUS PB278"
 then
 	autorandr --load home
+elif echo $MONITORNAMES | grep -qi "HP 22cwa"
+then
+	autorandr --load kitchen-hp
 else
 	autorandr --load mb-only
 fi

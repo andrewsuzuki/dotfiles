@@ -42,6 +42,7 @@ borg create                         \
     --exclude '/home/andrew/.local/share/xorg/*' \
     --exclude '/home/andrew/.z' \
     --exclude '/home/andrew/.zsh_history' \
+    --exclude '/home/andrew/.thumbnails/*' \
                                     \
     ::'{hostname}-{now}'            \
     /etc                            \

@@ -41,21 +41,22 @@ export SSH_AUTH_SOCK
 # Set DPI
 # xrandr --dpi 220
 
-# sxhkd (Simple X Hotkey Daemon)
-sxhkd -t 1 &
-
 # udiskie (drive auto-mount)
 udiskie &
 
 # autorandr (xrandr)
 scripts/keys/autorandr-conditional-load.sh
 
-# Desktop background
-scripts/misc/desktop-background.sh
-
 # qt (use qt5ct config tool)
 export QT_QPA_PLATFORMTHEME="qt5ct"
 
+# sxhkd (Simple X Hotkey Daemon)
+sxhkd -t 1 &
+
+# Desktop background
+scripts/misc/desktop-background.sh
+
 # start i3
-#exec i3
-exec openbox-session
+exec i3
+#exec icewm-session --nobg
+#exec startxfce4

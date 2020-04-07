@@ -20,6 +20,7 @@ source ~/scripts/zsh/aliases.sh
 # Name of the theme to load (~/.oh-my-zsh/themes)
 # (or use "random" for a random theme
 ZSH_THEME="lambda-gitster"
+#ZSH_THEME="simple"
 # Use case-insensitive auto-completion
 CASE_SENSITIVE="false"
 # Correct mistakes between _ and -
@@ -78,3 +79,5 @@ export NVIM_TUI_ENABLE_TRUE_COLOR=1 # enable true 24-bit color
 # Key timeout in tenths of seconds
 # (esp. for ESC to normal mode in zsh vi mode)
 export KEYTIMEOUT=1
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"

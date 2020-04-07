@@ -11,7 +11,7 @@ case $CHOICE in
 		systemctl reboot
 		;;
 	"l")
-		i3-msg exit
+		i3-msg exit || icesh logout
 		;;
 	"p")
 		systemctl poweroff

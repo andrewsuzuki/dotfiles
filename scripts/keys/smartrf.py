@@ -12,7 +12,6 @@ import argparse
 import time
 import shlex
 
-
 def active_window():
     try:
         out = subprocess.check_output(["xdotool", "getactivewindow"])

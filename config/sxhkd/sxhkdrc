@@ -6,7 +6,7 @@ mod5+s
 
 # Power Menu
 {Pause, XF86PowerOff}
-	termite -e $HOME/scripts/keys/power-off.sh
+	alacritty -e $HOME/scripts/keys/power-off.sh
 
 # Volume
 XF86AudioRaiseVolume
@@ -26,9 +26,9 @@ XF86AudioMute
 
 # Backlight
 XF86MonBrightnessUp
-	light -s sysfs/backlight/acpi_video0 -A 10
+	$HOME/scripts/keys/backlight.sh up
 XF86MonBrightnessDown
-	light -s sysfs/backlight/acpi_video0 -U 10
+	$HOME/scripts/keys/backlight.sh down
 
 # Keyboard Backlight
 XF86KbdBrightnessUp
@@ -48,12 +48,20 @@ button13
 # ------------
 
 # Termite
+# mod4+Return
+# 	termite
+# mod4+shift+Return
+# 	termite -d "$(xcwd)"
+# mod3+Return
+# 	smartrf termite termite --trap
+
+# Alacritty
 mod4+Return
-	termite
+	alacritty
 mod4+shift+Return
-	termite -d "$(xcwd)"
+	alacritty --working-directory "$(xcwd)"
 mod3+Return
-	smartrf termite termite --trap
+	smartrf alacritty alacritty --trap
 
 # Chrome
 {mod4+shift+b, mod4+shift+p, mod3+b}
@@ -89,17 +97,42 @@ mod3+t
 
 # Vim
 mod3+v
-	smartrf termite "^[n]vim" --by name
+	smartrf alacritty "^[n]vim" --by name
 
 # networkmanager_dmenu (in rofi)
 mod5+w
-	networkmanager_dmenu
-# rescan wifi
-mod5+shift+w
-	nmcli device wifi rescan
+	cmst
 
 # Chord example
-# mod4 + o ; {t,c,f}
-# 	{termite,google-chrome-stable,firefox}
+# mod4+o ; {t,c,f}
+# 	{alacritty,google-chrome-stable,firefox}
+
+# mod4+g ; {j,k,l}
+#  	{smartrf google-chrome google-chrome, smartrf code-oss code-oss, smartrf alacritty alacritty --trap}
+
+# # Window switcher
+# mod4+g ; mod4 + g
+# 	alacritty -e $HOME/scripts/keys/choose-window.sh
+
+mod4+q
+	wmctrl -c :ACTIVE:
+
+# IceWM
+# mod4+f
+#   icesh -w focus toggleState Maximized
+# mod4+Escape
+# 	wmctrl -k on
+# mod4+1
+#  	smartrf google-chrome google-chrome
+# mod4+2
+#  	smartrf vscodium vscodium
+# mod4+3
+#  	smartrf alacritty alacritty --trap
+# mod4+0
+#  	smartrf spotify spotify --sleep 1
+# mod4+h
+# 	wmctrl -r :ACTIVE: -e "0,0,0,400,500" # TODO
+# mod4+l
+# 	echo "blah" # TODO
 
 # vim: ts=2:sw=2
