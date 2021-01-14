@@ -13,29 +13,40 @@
 ;background = #dcdad5
 ;background = #F0D3F7
 ;background = #645f54
+; black:
 ;background = #000000
-;background = #C9D5B5
-background = #c9ab93
+; desert tan:
+;background = #c9ab93
+; pure blue:
 ;background = #0000FF
+; dark blue gray:
+;background = #1F3B4D
+; very dark blue:
+;background = #000133
+; gray purple:
+background = #826D8C
+; dark purple:
+;background = #36013F
 
 ;background-alt = #00007f
 background-alt = #00FFFF
 ;background-alt = #973BF9
 ;background-alt = #c9ab93
 ;foreground = ${xrdb:color7:#222}
-foreground = #000000
-;foreground = #00ffff
+;foreground = #000000
+foreground = #00FFFF
 ;foreground = #0000ff
 ;foreground = #59FFA0
 ;foreground = #1f2d3d
 ;ummm foreground-alt?
-foreground-alt = #0000ff
+;foreground-alt = #00aaff
+foreground-alt = #76FF7B
 white = #ffffff
 black = #000000
 blue = #0000ff
 primary = #00007f
 secondary = #e60053
-alert = #FF5E5B
+alert = #FE2C54
 
 [bar/pinkie]
 ;monitor = ${env:MONITOR:DP1}
@@ -51,19 +62,19 @@ fixed-center = false
 
 enable-ipc = true
 
-;background = ${colors.background}
+background = ${colors.background}
 
 ; gradient from cyan to sand
-background-0 = #00a8e5
-background-1 = #15A9D9
-background-2 = #2BAACE
-background-3 = #40ABC3
-background-4 = #56ACB8
-background-5 = #6BADAC
-background-6 = #81AEA1
-background-7 = #96AF96
-background-8 = #ACB08B
-background-9 = #C2B280
+; background-0 = #00a8e5
+; background-1 = #15A9D9
+; background-2 = #2BAACE
+; background-3 = #40ABC3
+; background-4 = #56ACB8
+; background-5 = #6BADAC
+; background-6 = #81AEA1
+; background-7 = #96AF96
+; background-8 = #ACB08B
+; background-9 = #C2B280
 
 ; ; gradient from cyan to rust
 ; background-0 = #00a8e5
@@ -88,7 +99,8 @@ border-color = #00000000
 padding-left = 0
 padding-right = 2
 
-separator = "·"
+;separator = "·"
+separator = " "
 ;separator = " – "
 
 ; module-margin-left = 1
@@ -97,9 +109,10 @@ module-margin-left = 0
 module-margin-right = 0
 
 ;font-0 = NotoSansMono:style=medium:pixelsize=9;3
-;font-0 = FiraCode:style=medium:pixelsize=9;3
-;font-0 = ComicSansMS:style=bold:pixelsize=10;4
-font-0 = ComicSansMS:style=regular:pixelsize=10;3
+;font-0 = FiraCode:style=regular:pixelsize=8;3
+;font-0 = SourceCodePro:style=Regular:pixelsize=8;3
+;font-0 = ComicSansMS:style=bold:pixelsize=11;3
+font-0 = ComicSansMS:style=bold:pixelsize=10;4
 ;font-0 = Times:style=bold:pixelsize=9;4
 ;font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-1 = JoyPixels:scale=10;6
@@ -107,13 +120,13 @@ font-2 = siji:pixelsize=8;1
 
 modules-left = i3
 modules-center =
-modules-right = updates-arch-combined filesystem backlight-acpi pulseaudio cpu temperature memory wlan eth battery date
+modules-right = protonvpn-status filesystem backlight-acpi pulseaudio cpu temperature memory wlan eth battery date
 
 ; hide system tray
 tray-position = none
-; tray-position = right
+;tray-position = right
 tray-padding = 0
-;tray-background = #0063ff
+; tray-background = #0063ff
 
 ;wm-restack = bspwm
 ;wm-restack = i3
@@ -156,7 +169,7 @@ interval = 25
 mount-0 = /
 
 ;label-mounted = %{F#0a81f5}%mountpoint%%{F-}: %percentage_used%%
-label-mounted = %mountpoint%%{F-}: %percentage_used%%
+label-mounted = [%mountpoint%%{F-}: %percentage_used%%]
 label-unmounted = %mountpoint% not mounted
 label-unmounted-foreground = ${colors.foreground-alt}
 
@@ -240,7 +253,7 @@ label-song-ellipsis = true
 [module/xbacklight]
 type = internal/xbacklight
 
-format = b: <label>
+format = [b: <label>]
 label = %percentage%%
 
 bar-width = 5
@@ -263,7 +276,7 @@ enable-scroll = false
 [module/cpu]
 type = internal/cpu
 interval = 2
-format = "c: <label>"
+format = "[c: <label>]"
 ;format-prefix = "cpu:"
 ;format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #f90000
@@ -273,7 +286,7 @@ label = %percentage%%
 [module/memory]
 type = internal/memory
 interval = 2
-format = "m: <label>"
+format = "[m: <label>]"
 ;format-prefix = " "
 ;format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #4bffdc
@@ -284,11 +297,11 @@ type = internal/network
 interface = wlp2s0
 interval = 3.0
 
-format-connected = w: <label-connected>
+format-connected = [w: <label-connected>]
 ;format-connected-underline = #9f78e1
 label-connected = %essid%
 
-format-disconnected = wifi: disconnected
+format-disconnected = [w: disconnected]
 ;format-disconnected = <label-disconnected>
 ;format-disconnected-underline = ${self.format-connected-underline}
 ;label-disconnected = %ifname% disconnected
@@ -321,16 +334,15 @@ format-disconnected =
 type = internal/date
 interval = 1
 
-date = "%Y-%m-%d"
-
-;time = %H:%M
+; (e.g. %a => Mon, %F => %Y-%m-%d => 2020-04-06)
+date = "%a %F"
 time = %r
 
-format = <label>
+format = [<label>]
 ;format-prefix = 
 ;format-prefix-foreground = ${colors.foreground-alt}
 ;format-underline = #0a6cf5
-format-foreground = #0000FF
+format-foreground = ${colors.foreground-alt}
 
 label = %date% %time%
 
@@ -342,12 +354,13 @@ type = internal/pulseaudio
 sink = alsa_output.usb-Fractal_Audio_Systems_AXE-FX_II-00.analog-stereo
 
 ;format-volume = <label-volume> <bar-volume>
-format-volume = v: <label-volume>
+format-volume = [v: <label-volume>]
 label-volume = %percentage%%
 ;label-volume-foreground = ${root.foreground}
 
-label-muted = vol: muted
-label-muted-foreground = #CC2936
+label-muted = [v: muted]
+;label-muted-foreground = #CC2936
+label-muted-foreground = ${colors.alert}
 
 bar-volume-width = 5
 bar-volume-foreground-0 = #55aa55
@@ -401,15 +414,15 @@ adapter = ADP1
 full-at = 98
 
 ;format-charging = p: <label-charging>↑
-format-charging = p: <label-charging>c
+format-charging = [p: <label-charging>%c]
 label-charging = %percentage%
 ;format-charging-underline = #ffb52a
 
-format-discharging = p: <label-discharging>d
+format-discharging = [p: <label-discharging>%d]
 label-discharging = %percentage%
 ;format-discharging-underline = ${self.format-charging-underline}
 
-format-full = p: full
+format-full = [p: #full]
 ;format-full-prefix = " "
 ;format-full-prefix-foreground = #3BC14A
 ;format-full-underline = ${self.format-charging-underline}
@@ -489,6 +502,14 @@ menu-2-1-exec = menu-open-0
 type = custom/script
 exec = ~/scripts/polybar/updates-arch-combined.sh
 interval = 600
+; format-background = ${colors.alert}
+; format-foreground = #000000
+; format-padding = 1
+
+[module/protonvpn-status]
+type = custom/script
+exec = ~/scripts/misc/protonvpn-status.sh
+interval = 5
 ; format-background = ${colors.alert}
 ; format-foreground = #000000
 ; format-padding = 1
